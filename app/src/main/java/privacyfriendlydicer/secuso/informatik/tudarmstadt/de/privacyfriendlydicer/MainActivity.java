@@ -8,6 +8,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
@@ -53,6 +54,9 @@ public class MainActivity extends ActionBarActivity {
                 result.setText(resultString);
             }
         });
+
+        ImageView test = (ImageView) findViewById(R.id.resultOne);
+        //test.setImageResource();
     }
 
     @Override
