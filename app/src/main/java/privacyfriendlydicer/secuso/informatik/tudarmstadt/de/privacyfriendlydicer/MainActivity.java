@@ -14,6 +14,17 @@ import android.widget.TextView;
 
 public class MainActivity extends ActionBarActivity {
 
+    ImageView resultOne;
+    ImageView resultTwo;
+    ImageView resultThree;
+    ImageView resultFour;
+    ImageView resultFive;
+    ImageView resultSix;
+    ImageView resultSeven;
+    ImageView resultEight;
+    ImageView resultNine;
+    ImageView resultTen;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,17 +57,47 @@ public class MainActivity extends ActionBarActivity {
                 Dicer dicer = new Dicer();
                 TextView result = (TextView) findViewById(R.id.textViewResults);
                 int[] dice = dicer.rollDice(poolSeekBar.getProgress() + 1);
+                initResultDiceViews();
 
                 for (int i = 0; i < dice.length; i++) {
                     resultString += dice[i];
                 }
 
                 result.setText(resultString);
+
+                for (int i = 0; i < dice.length; i++) {
+                    ImageView resultOne = (ImageView) findViewById(R.id.resultOne);
+                    switch (i) {
+                        case 0:  switchDice(resultOne, dice[i]);
+                            break;
+                        case 1:  switchDice(resultTwo, dice[i]);
+                            break;
+                        case 2:  switchDice(resultThree, dice[i]);
+                            break;
+                        case 3:  switchDice(resultFour, dice[i]);
+                            break;
+                        case 4: switchDice(resultFive, dice[i]);
+                            break;
+                        case 5:  switchDice(resultSix, dice[i]);
+                            break;
+                        case 6:  switchDice(resultSeven, dice[i]);
+                            break;
+                        case 7:  switchDice(resultEight, dice[i]);
+                            break;
+                        case 8:  switchDice(resultNine, dice[i]);
+                            break;
+                        case 9:  switchDice(resultTen, dice[i]);
+                            break;
+                        default:
+                            break;
+                    }
+                }
             }
         });
 
-        ImageView test = (ImageView) findViewById(R.id.resultOne);
-        test.setImageResource(R.drawable.ws1);
+        //ImageView resultOne = (ImageView) findViewById(R.id.resultOne);
+        //resultOne.setImageResource(R.drawable.ws1);
+
     }
 
     @Override
@@ -79,5 +120,38 @@ public class MainActivity extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void initResultDiceViews(){
+        resultOne = (ImageView) findViewById(R.id.resultOne);
+        resultTwo = (ImageView) findViewById(R.id.resultTwo);
+        resultThree = (ImageView) findViewById(R.id.resultThree);
+        resultFour = (ImageView) findViewById(R.id.resultFour);
+        resultFive = (ImageView) findViewById(R.id.resultFive);
+        resultSix = (ImageView) findViewById(R.id.resultSix);
+        resultSeven = (ImageView) findViewById(R.id.resultSeven);
+        resultEight = (ImageView) findViewById(R.id.resultEight);
+        resultNine = (ImageView) findViewById(R.id.resultNine);
+        resultTen = (ImageView) findViewById(R.id.resultTen);
+    }
+
+    public void switchDice(ImageView imageView, int i){
+        switch (i) {
+            case 1:  imageView.setImageResource(R.drawable.ws1);
+                break;
+            case 2:  imageView.setImageResource(R.drawable.ws2);
+                break;
+            case 3:  imageView.setImageResource(R.drawable.ws3);
+                break;
+            case 4:  imageView.setImageResource(R.drawable.ws4);
+                break;
+            case 5: imageView.setImageResource(R.drawable.ws5);
+                break;
+            case 6:  imageView.setImageResource(R.drawable.ws6);
+                break;
+            default:
+                break;
+        }
+
     }
 }
