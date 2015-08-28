@@ -56,7 +56,7 @@ public class MainActivity extends ActionBarActivity {
         });
 
         ImageView test = (ImageView) findViewById(R.id.resultOne);
-        //test.setImageResource();
+        test.setImageResource(R.drawable.ws1);
     }
 
     @Override
