@@ -53,17 +53,9 @@ public class MainActivity extends ActionBarActivity {
         rollDiceButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //String resultString = "";
                 Dicer dicer = new Dicer();
-                //TextView result = (TextView) findViewById(R.id.textViewResults);
                 int[] dice = dicer.rollDice(poolSeekBar.getProgress() + 1);
                 initResultDiceViews();
-
-                /*for (int i = 0; i < dice.length; i++) {
-                    resultString += dice[i];
-                }
-
-                result.setText(resultString);*/
 
                 for (int i = 0; i < dice.length; i++) {
                     ImageView resultOne = (ImageView) findViewById(R.id.resultOne);
@@ -95,9 +87,6 @@ public class MainActivity extends ActionBarActivity {
             }
         });
 
-        //ImageView resultOne = (ImageView) findViewById(R.id.resultOne);
-        //resultOne.setImageResource(R.drawable.ws1);
-
     }
 
     @Override
@@ -124,15 +113,25 @@ public class MainActivity extends ActionBarActivity {
 
     public void initResultDiceViews(){
         resultOne = (ImageView) findViewById(R.id.resultOne);
+        resultOne.setImageResource(0);
         resultTwo = (ImageView) findViewById(R.id.resultTwo);
+        resultTwo.setImageResource(0);
         resultThree = (ImageView) findViewById(R.id.resultThree);
+        resultThree.setImageResource(0);
         resultFour = (ImageView) findViewById(R.id.resultFour);
+        resultFour.setImageResource(0);
         resultFive = (ImageView) findViewById(R.id.resultFive);
+        resultFive.setImageResource(0);
         resultSix = (ImageView) findViewById(R.id.resultSix);
+        resultSix.setImageResource(0);
         resultSeven = (ImageView) findViewById(R.id.resultSeven);
+        resultSeven.setImageResource(0);
         resultEight = (ImageView) findViewById(R.id.resultEight);
+        resultEight.setImageResource(0);
         resultNine = (ImageView) findViewById(R.id.resultNine);
+        resultNine.setImageResource(0);
         resultTen = (ImageView) findViewById(R.id.resultTen);
+        resultTen.setImageResource(0);
     }
 
     public void switchDice(ImageView imageView, int i){
@@ -148,6 +147,8 @@ public class MainActivity extends ActionBarActivity {
             case 5: imageView.setImageResource(R.drawable.ws5);
                 break;
             case 6:  imageView.setImageResource(R.drawable.ws6);
+                break;
+            case 0: imageView.setImageResource(0);
                 break;
             default:
                 break;
