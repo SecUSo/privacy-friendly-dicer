@@ -45,6 +45,8 @@
         android:layout_below="@+id/seekBar"
         android:text="@string/roll_button"
         android:textSize="20sp"
+        android:textColor="@color/white"
+        android:background="@color/darkblue"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="120dp"
