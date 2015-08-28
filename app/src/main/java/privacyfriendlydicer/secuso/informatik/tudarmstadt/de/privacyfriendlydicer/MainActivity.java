@@ -53,17 +53,17 @@ public class MainActivity extends ActionBarActivity {
         rollDiceButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String resultString = "";
+                //String resultString = "";
                 Dicer dicer = new Dicer();
-                TextView result = (TextView) findViewById(R.id.textViewResults);
+                //TextView result = (TextView) findViewById(R.id.textViewResults);
                 int[] dice = dicer.rollDice(poolSeekBar.getProgress() + 1);
                 initResultDiceViews();
 
-                for (int i = 0; i < dice.length; i++) {
+                /*for (int i = 0; i < dice.length; i++) {
                     resultString += dice[i];
                 }
 
-                result.setText(resultString);
+                result.setText(resultString);*/
 
                 for (int i = 0; i < dice.length; i++) {
                     ImageView resultOne = (ImageView) findViewById(R.id.resultOne);

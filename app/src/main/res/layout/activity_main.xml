@@ -8,20 +8,24 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textSize="18dp"
         android:text="@string/choose_dice_heading"
         android:id="@+id/chooseDiceHeading"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="50dp"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/chooseDiceNumber"
+        android:textSize="18dp"
         android:text="5"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_toRightOf="@+id/chooseDiceHeading"
-        android:layout_marginLeft="225dp" />
+        android:layout_marginLeft="295dp"
+        android:layout_marginTop="50dp"/>
 
     <SeekBar
         android:layout_width="match_parent"
@@ -43,64 +47,52 @@
         android:textSize="20sp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="58dp" />
+        android:layout_marginTop="120dp"
+        />
 
-    <TextView
+
+    <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/results_Heading"
-        android:id="@+id/resultsHeading"
         android:layout_below="@+id/rollButton"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="58dp"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Medium Text"
-        android:id="@+id/textViewResults"
-        android:layout_below="@+id/resultsHeading"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="69dp" />
+        android:id="@+id/resultOne"
+        android:layout_marginTop="70dp"
+        />
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textViewResults"
-        android:id="@+id/resultOne" />
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textViewResults"
+        android:layout_below="@+id/rollButton"
         android:layout_toRightOf="@+id/resultOne"
         android:layout_marginLeft="6dp"
+        android:layout_marginTop="70dp"
         android:id="@+id/resultTwo"/>
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textViewResults"
+        android:layout_below="@+id/rollButton"
         android:layout_toRightOf="@+id/resultTwo"
         android:layout_marginLeft="6dp"
+        android:layout_marginTop="70dp"
         android:id="@+id/resultThree"/>
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textViewResults"
+        android:layout_below="@+id/rollButton"
         android:layout_toRightOf="@+id/resultThree"
         android:layout_marginLeft="6dp"
+        android:layout_marginTop="70dp"
         android:id="@+id/resultFour"/>
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textViewResults"
+        android:layout_below="@+id/rollButton"
         android:layout_toRightOf="@+id/resultFour"
         android:layout_marginLeft="6dp"
+        android:layout_marginTop="70dp"
         android:id="@+id/resultFive"/>
 
     <ImageView

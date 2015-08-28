@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Privacy Friendly Dicer</string>
     <string name="action_settings">Settings</string>
-    <string name="roll_button">Roll the Dice</string>
+    <string name="roll_button">Roll the Dice(s)</string>
     <string name="choose_dice_heading">Please choose the number of dices: </string>
     <string name="results_Heading">Results: </string>
 </resources>
