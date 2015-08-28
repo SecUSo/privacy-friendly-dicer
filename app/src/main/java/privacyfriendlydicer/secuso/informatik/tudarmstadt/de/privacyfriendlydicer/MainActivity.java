@@ -46,7 +46,7 @@ public class MainActivity extends ActionBarActivity {
                 TextView result = (TextView) findViewById(R.id.textViewResults);
                 int[] dice = dicer.rollDice(poolSeekBar.getProgress() + 1);
 
-                for (int i=0;i<dice.length;i++) {
+                for (int i = 0; i < dice.length; i++) {
                     resultString += dice[i];
                 }
 
