@@ -76,6 +76,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/textViewResults"
         android:layout_toRightOf="@+id/resultOne"
+        android:layout_marginLeft="6dp"
         android:id="@+id/resultTwo"/>
 
     <ImageView
@@ -83,6 +84,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/textViewResults"
         android:layout_toRightOf="@+id/resultTwo"
+        android:layout_marginLeft="6dp"
         android:id="@+id/resultThree"/>
 
     <ImageView
@@ -90,6 +92,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/textViewResults"
         android:layout_toRightOf="@+id/resultThree"
+        android:layout_marginLeft="6dp"
         android:id="@+id/resultFour"/>
 
     <ImageView
@@ -97,12 +100,14 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/textViewResults"
         android:layout_toRightOf="@+id/resultFour"
+        android:layout_marginLeft="6dp"
         android:id="@+id/resultFive"/>
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/resultOne"
+        android:layout_marginTop="40dp"
         android:id="@+id/resultSix"/>
 
     <ImageView
@@ -110,6 +115,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/resultOne"
         android:layout_toRightOf="@+id/resultSix"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="6dp"
         android:id="@+id/resultSeven"/>
 
     <ImageView
@@ -117,6 +124,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/resultOne"
         android:layout_toRightOf="@+id/resultSeven"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="6dp"
         android:id="@+id/resultEight"/>
 
     <ImageView
@@ -124,6 +133,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/resultOne"
         android:layout_toRightOf="@+id/resultEight"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="6dp"
         android:id="@+id/resultNine"/>
 
     <ImageView
@@ -131,6 +142,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/resultOne"
         android:layout_toRightOf="@+id/resultNine"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="6dp"
         android:id="@+id/resultTen"/>
 
 </RelativeLayout>
