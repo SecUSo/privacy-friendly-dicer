@@ -1,7 +1,5 @@
 package privacyfriendlydicer.secuso.informatik.tudarmstadt.de.privacyfriendlydicer;
 
-import android.app.ActionBar;
-import android.graphics.drawable.ColorDrawable;
 import android.os.Vibrator;
 import android.content.Context;
 import android.support.v7.app.ActionBarActivity;
