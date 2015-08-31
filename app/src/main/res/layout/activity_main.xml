@@ -20,7 +20,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/chooseDiceNumber"
         android:textSize="18dp"
-        android:text="5"
+        android:text="6"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_toRightOf="@+id/chooseDiceHeading"

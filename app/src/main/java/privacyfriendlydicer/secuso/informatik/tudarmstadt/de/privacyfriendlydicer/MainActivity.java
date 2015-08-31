@@ -2,6 +2,8 @@ package privacyfriendlydicer.secuso.informatik.tudarmstadt.de.privacyfriendlydic
 
 import android.app.ActionBar;
 import android.graphics.drawable.ColorDrawable;
+import android.os.Vibrator;
+import android.content.Context;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -24,6 +26,8 @@ public class MainActivity extends ActionBarActivity {
     ImageView resultEight;
     ImageView resultNine;
     ImageView resultTen;
+
+    private Vibrator vibrator;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,6 +60,8 @@ public class MainActivity extends ActionBarActivity {
                 Dicer dicer = new Dicer();
                 int[] dice = dicer.rollDice(poolSeekBar.getProgress() + 1);
                 initResultDiceViews();
+
+                vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
 
                 for (int i = 0; i < dice.length; i++) {
                     ImageView resultOne = (ImageView) findViewById(R.id.resultOne);
