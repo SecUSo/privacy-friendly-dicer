@@ -25,7 +25,7 @@ public class MainActivity extends ActionBarActivity {
     ImageView resultNine;
     ImageView resultTen;
 
-    private Vibrator vibrator;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,7 +59,7 @@ public class MainActivity extends ActionBarActivity {
                 int[] dice = dicer.rollDice(poolSeekBar.getProgress() + 1);
                 initResultDiceViews();
 
-                vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+                final Vibrator vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
 
                 for (int i = 0; i < dice.length; i++) {
                     ImageView resultOne = (ImageView) findViewById(R.id.resultOne);
