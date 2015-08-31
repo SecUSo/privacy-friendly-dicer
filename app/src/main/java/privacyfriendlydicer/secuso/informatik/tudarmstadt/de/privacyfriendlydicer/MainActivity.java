@@ -25,9 +25,6 @@ public class MainActivity extends ActionBarActivity {
     ImageView resultNine;
     ImageView resultTen;
 
-
-
-    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
@@ -62,7 +59,6 @@ public class MainActivity extends ActionBarActivity {
                 final Vibrator vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
 
                 for (int i = 0; i < dice.length; i++) {
-                    ImageView resultOne = (ImageView) findViewById(R.id.resultOne);
                     switch (i) {
                         case 0:
                             switchDice(resultOne, dice[i]);
@@ -137,7 +133,7 @@ public class MainActivity extends ActionBarActivity {
 
     public void initResultDiceViews() {
         resultOne = (ImageView) findViewById(R.id.resultOne);
-        resultOne.setImageResource(0);
+        resultTwo.setImageResource(0);
         resultTwo = (ImageView) findViewById(R.id.resultTwo);
         resultTwo.setImageResource(0);
         resultThree = (ImageView) findViewById(R.id.resultThree);
@@ -158,8 +154,8 @@ public class MainActivity extends ActionBarActivity {
         resultTen.setImageResource(0);
     }
 
-    public void switchDice(ImageView imageView, int i) {
-        switch (i) {
+    public void switchDice(ImageView imageView, int result) {
+        switch (result) {
             case 1:
                 imageView.setImageResource(R.drawable.ws1);
                 break;
