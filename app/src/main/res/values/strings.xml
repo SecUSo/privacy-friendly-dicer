@@ -3,5 +3,4 @@
     <string name="action_settings">Settings</string>
     <string name="roll_button">Roll the Dice</string>
     <string name="choose_dice_heading">Number of dice: </string>
-    <string name="results_Heading">Results: </string>
 </resources>

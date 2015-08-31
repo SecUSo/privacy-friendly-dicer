@@ -18,7 +18,9 @@ android {
         }
     }
     sourceSets {
-        main { res.srcDirs = ['src/main/res', 'src/main/res/2', 'src/main/res/result_dices'] }
+        main {
+            res.srcDirs = ['src/main/res', 'src/main/res/2', 'src/main/res/result_dices', 'src/main/res/values-de']
+        }
     }
 }
 
