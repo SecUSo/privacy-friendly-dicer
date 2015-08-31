@@ -66,25 +66,45 @@ public class MainActivity extends ActionBarActivity {
                 for (int i = 0; i < dice.length; i++) {
                     ImageView resultOne = (ImageView) findViewById(R.id.resultOne);
                     switch (i) {
-                        case 0:  switchDice(resultOne, dice[i]);
+                        case 0:
+                            switchDice(resultOne, dice[i]);
+                            vibrator.vibrate(50);
                             break;
-                        case 1:  switchDice(resultTwo, dice[i]);
+                        case 1:
+                            switchDice(resultTwo, dice[i]);
+                            vibrator.vibrate(50);
                             break;
-                        case 2:  switchDice(resultThree, dice[i]);
+                        case 2:
+                            switchDice(resultThree, dice[i]);
+                            vibrator.vibrate(50);
                             break;
-                        case 3:  switchDice(resultFour, dice[i]);
+                        case 3:
+                            switchDice(resultFour, dice[i]);
+                            vibrator.vibrate(50);
                             break;
-                        case 4: switchDice(resultFive, dice[i]);
+                        case 4:
+                            switchDice(resultFive, dice[i]);
+                            vibrator.vibrate(50);
                             break;
-                        case 5:  switchDice(resultSix, dice[i]);
+                        case 5:
+                            switchDice(resultSix, dice[i]);
+                            vibrator.vibrate(50);
                             break;
-                        case 6:  switchDice(resultSeven, dice[i]);
+                        case 6:
+                            switchDice(resultSeven, dice[i]);
+                            vibrator.vibrate(50);
                             break;
-                        case 7:  switchDice(resultEight, dice[i]);
+                        case 7:
+                            switchDice(resultEight, dice[i]);
+                            vibrator.vibrate(50);
                             break;
-                        case 8:  switchDice(resultNine, dice[i]);
+                        case 8:
+                            switchDice(resultNine, dice[i]);
+                            vibrator.vibrate(50);
                             break;
-                        case 9:  switchDice(resultTen, dice[i]);
+                        case 9:
+                            switchDice(resultTen, dice[i]);
+                            vibrator.vibrate(50);
                             break;
                         default:
                             break;
@@ -117,7 +137,7 @@ public class MainActivity extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void initResultDiceViews(){
+    public void initResultDiceViews() {
         resultOne = (ImageView) findViewById(R.id.resultOne);
         resultOne.setImageResource(0);
         resultTwo = (ImageView) findViewById(R.id.resultTwo);
@@ -140,21 +160,28 @@ public class MainActivity extends ActionBarActivity {
         resultTen.setImageResource(0);
     }
 
-    public void switchDice(ImageView imageView, int i){
+    public void switchDice(ImageView imageView, int i) {
         switch (i) {
-            case 1:  imageView.setImageResource(R.drawable.ws1);
+            case 1:
+                imageView.setImageResource(R.drawable.ws1);
                 break;
-            case 2:  imageView.setImageResource(R.drawable.ws2);
+            case 2:
+                imageView.setImageResource(R.drawable.ws2);
                 break;
-            case 3:  imageView.setImageResource(R.drawable.ws3);
+            case 3:
+                imageView.setImageResource(R.drawable.ws3);
                 break;
-            case 4:  imageView.setImageResource(R.drawable.ws4);
+            case 4:
+                imageView.setImageResource(R.drawable.ws4);
                 break;
-            case 5: imageView.setImageResource(R.drawable.ws5);
+            case 5:
+                imageView.setImageResource(R.drawable.ws5);
                 break;
-            case 6:  imageView.setImageResource(R.drawable.ws6);
+            case 6:
+                imageView.setImageResource(R.drawable.ws6);
                 break;
-            case 0: imageView.setImageResource(0);
+            case 0:
+                imageView.setImageResource(0);
                 break;
             default:
                 break;
