@@ -14,16 +14,7 @@ import android.widget.TextView;
 
 public class MainActivity extends ActionBarActivity {
 
-    ImageView resultOne;
-    ImageView resultTwo;
-    ImageView resultThree;
-    ImageView resultFour;
-    ImageView resultFive;
-    ImageView resultSix;
-    ImageView resultSeven;
-    ImageView resultEight;
-    ImageView resultNine;
-    ImageView resultTen;
+    ImageView[] imageViews;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -59,50 +50,8 @@ public class MainActivity extends ActionBarActivity {
                 final Vibrator vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
 
                 for (int i = 0; i < dice.length; i++) {
-                    switch (i) {
-                        case 0:
-                            switchDice(resultOne, dice[i]);
-                            vibrator.vibrate(50);
-                            break;
-                        case 1:
-                            switchDice(resultTwo, dice[i]);
-                            vibrator.vibrate(50);
-                            break;
-                        case 2:
-                            switchDice(resultThree, dice[i]);
-                            vibrator.vibrate(50);
-                            break;
-                        case 3:
-                            switchDice(resultFour, dice[i]);
-                            vibrator.vibrate(50);
-                            break;
-                        case 4:
-                            switchDice(resultFive, dice[i]);
-                            vibrator.vibrate(50);
-                            break;
-                        case 5:
-                            switchDice(resultSix, dice[i]);
-                            vibrator.vibrate(50);
-                            break;
-                        case 6:
-                            switchDice(resultSeven, dice[i]);
-                            vibrator.vibrate(50);
-                            break;
-                        case 7:
-                            switchDice(resultEight, dice[i]);
-                            vibrator.vibrate(50);
-                            break;
-                        case 8:
-                            switchDice(resultNine, dice[i]);
-                            vibrator.vibrate(50);
-                            break;
-                        case 9:
-                            switchDice(resultTen, dice[i]);
-                            vibrator.vibrate(50);
-                            break;
-                        default:
-                            break;
-                    }
+                        switchDice(imageViews[i], dice[i]);
+                        vibrator.vibrate(50);
                 }
             }
         });
@@ -132,26 +81,28 @@ public class MainActivity extends ActionBarActivity {
     }
 
     public void initResultDiceViews() {
-        resultOne = (ImageView) findViewById(R.id.resultOne);
-        resultTwo.setImageResource(0);
-        resultTwo = (ImageView) findViewById(R.id.resultTwo);
-        resultTwo.setImageResource(0);
-        resultThree = (ImageView) findViewById(R.id.resultThree);
-        resultThree.setImageResource(0);
-        resultFour = (ImageView) findViewById(R.id.resultFour);
-        resultFour.setImageResource(0);
-        resultFive = (ImageView) findViewById(R.id.resultFive);
-        resultFive.setImageResource(0);
-        resultSix = (ImageView) findViewById(R.id.resultSix);
-        resultSix.setImageResource(0);
-        resultSeven = (ImageView) findViewById(R.id.resultSeven);
-        resultSeven.setImageResource(0);
-        resultEight = (ImageView) findViewById(R.id.resultEight);
-        resultEight.setImageResource(0);
-        resultNine = (ImageView) findViewById(R.id.resultNine);
-        resultNine.setImageResource(0);
-        resultTen = (ImageView) findViewById(R.id.resultTen);
-        resultTen.setImageResource(0);
+        imageViews = new ImageView[10];
+
+        imageViews[0] = (ImageView) findViewById(R.id.resultOne);
+        imageViews[0].setImageResource(0);
+        imageViews[1] = (ImageView) findViewById(R.id.resultTwo);
+        imageViews[1].setImageResource(0);
+        imageViews[2] = (ImageView) findViewById(R.id.resultThree);
+        imageViews[2].setImageResource(0);
+        imageViews[3] = (ImageView) findViewById(R.id.resultFour);
+        imageViews[3].setImageResource(0);
+        imageViews[4] = (ImageView) findViewById(R.id.resultFive);
+        imageViews[4].setImageResource(0);
+        imageViews[5] = (ImageView) findViewById(R.id.resultSix);
+        imageViews[5].setImageResource(0);
+        imageViews[6] = (ImageView) findViewById(R.id.resultSeven);
+        imageViews[6].setImageResource(0);
+        imageViews[7] = (ImageView) findViewById(R.id.resultEight);
+        imageViews[7].setImageResource(0);
+        imageViews[8] = (ImageView) findViewById(R.id.resultNine);
+        imageViews[8].setImageResource(0);
+        imageViews[9] = (ImageView) findViewById(R.id.resultTen);
+        imageViews[9].setImageResource(0);
     }
 
     public void switchDice(ImageView imageView, int result) {
