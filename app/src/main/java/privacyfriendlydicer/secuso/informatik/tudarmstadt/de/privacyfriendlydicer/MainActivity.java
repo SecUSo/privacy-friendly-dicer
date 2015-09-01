@@ -84,25 +84,19 @@ public class MainActivity extends ActionBarActivity {
         imageViews = new ImageView[10];
 
         imageViews[0] = (ImageView) findViewById(R.id.resultOne);
-        imageViews[0].setImageResource(0);
         imageViews[1] = (ImageView) findViewById(R.id.resultTwo);
-        imageViews[1].setImageResource(0);
         imageViews[2] = (ImageView) findViewById(R.id.resultThree);
-        imageViews[2].setImageResource(0);
         imageViews[3] = (ImageView) findViewById(R.id.resultFour);
-        imageViews[3].setImageResource(0);
         imageViews[4] = (ImageView) findViewById(R.id.resultFive);
-        imageViews[4].setImageResource(0);
         imageViews[5] = (ImageView) findViewById(R.id.resultSix);
-        imageViews[5].setImageResource(0);
         imageViews[6] = (ImageView) findViewById(R.id.resultSeven);
-        imageViews[6].setImageResource(0);
         imageViews[7] = (ImageView) findViewById(R.id.resultEight);
-        imageViews[7].setImageResource(0);
         imageViews[8] = (ImageView) findViewById(R.id.resultNine);
-        imageViews[8].setImageResource(0);
         imageViews[9] = (ImageView) findViewById(R.id.resultTen);
-        imageViews[9].setImageResource(0);
+
+        for (int i = 0; i < imageViews.length; i++) {
+            imageViews[i].setImageResource(0);
+        }
     }
 
     public void switchDice(ImageView imageView, int result) {
