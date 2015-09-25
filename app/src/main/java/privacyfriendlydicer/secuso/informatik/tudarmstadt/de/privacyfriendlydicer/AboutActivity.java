@@ -15,6 +15,7 @@ public class AboutActivity extends ActionBarActivity{
         android.support.v7.app.ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
         actionBar.setTitle(R.string.about);
+        actionBar.setDisplayHomeAsUpEnabled(true);
 
     }
 

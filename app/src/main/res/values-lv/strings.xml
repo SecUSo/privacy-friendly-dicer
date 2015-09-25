@@ -7,6 +7,5 @@
     <string name="enable_shaking">Mest ar kratīšanu</string>
     <string name="vibration_title">Ieslēgt vibrāciju</string>
     <string name="about">Informācija</string>
-    <string name="version_number">Versija</string>
-    <string name="version">0.9</string>
+    <string name="version_number">Versija 0.9</string>
 </resources>

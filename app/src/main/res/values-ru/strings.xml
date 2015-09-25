@@ -7,6 +7,5 @@
     <string name="enable_shaking">Трести штобы бросать</string>
     <string name="vibration_title">Включить вибрацыю</string>
     <string name="about">Информацыя</string>
-    <string name="version_number">Версия</string>
-    <string name="version">0.9</string>
+    <string name="version_number">Версия 0.9</string>
 </resources>
