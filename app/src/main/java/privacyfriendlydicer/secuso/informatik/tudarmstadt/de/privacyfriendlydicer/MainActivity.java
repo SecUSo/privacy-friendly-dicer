@@ -15,7 +15,9 @@ import android.widget.TextView;
 
 public class MainActivity extends ActionBarActivity {
 
-    ImageView[] imageViews;
+    private ImageView[] imageViews;
+    private boolean shakingEnabled;
+    private boolean vibrationEnabled;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -58,6 +60,16 @@ public class MainActivity extends ActionBarActivity {
         });
 
     }
+
+    public void setShakingEnabled(boolean b) {
+        this.shakingEnabled = b;
+    }
+
+    public void setVibrationEnabled(boolean b) {
+        this.vibrationEnabled = b;
+    }
+
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
