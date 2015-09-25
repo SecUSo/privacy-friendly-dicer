@@ -2,6 +2,8 @@ package privacyfriendlydicer.secuso.informatik.tudarmstadt.de.privacyfriendlydic
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.hardware.Sensor;
+import android.hardware.SensorManager;
 import android.os.Vibrator;
 import android.content.Context;
 import android.support.v7.app.ActionBarActivity;
@@ -21,6 +23,11 @@ public class MainActivity extends ActionBarActivity {
     boolean shakingEnabled;
     boolean vibrationEnabled;
     SharedPreferences sharedPreferences;
+
+    // for Shaking
+    private SensorManager sensorManager;
+    private Sensor accelerometer;
+    private ShakeListener shakeListener;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -67,6 +74,33 @@ public class MainActivity extends ActionBarActivity {
                 }
             }
         });
+
+        // ShakeDetector initialization
+        sensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
+        accelerometer = sensorManager
+                .getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
+        shakeListener = new ShakeListener();
+        shakeListener.setOnShakeListener(new ShakeListener.OnShakeListener() {
+
+            public void onShake(int count) {
+
+                Dicer dicer = new Dicer();
+                int[] dice = dicer.rollDice(poolSeekBar.getProgress() + 1);
+                initResultDiceViews();
+
+                if (shakingEnabled) {
+                    final Vibrator vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+
+                    for (int i = 0; i < dice.length; i++) {
+                        switchDice(imageViews[i], dice[i]);
+                        if (vibrationEnabled) {
+                            vibrator.vibrate(50);
+                        }
+                    }
+                }
+            }
+        });
+
 
     }
 
