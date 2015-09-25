@@ -36,7 +36,7 @@
         android:layout_alignParentStart="true"
         android:max="9"
         android:progress="5"
-        android:layout_marginTop="4dp" />
+        android:layout_marginTop="10dp" />
 
     <Button
         android:id="@+id/rollButton"
@@ -47,9 +47,8 @@
         android:textSize="20sp"
         android:textColor="@color/white"
         android:background="@color/darkblue"
-        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="120dp"
+        android:layout_marginTop="15dp"
         />
 
 
