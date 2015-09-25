@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Privacy Friendly Dicer</string>
+    <string name="action_settings">Iestatījumi</string>
+    <string name="roll_button">Mest kauliņus</string>
+    <string name="choose_dice_heading">Kauliņu skaits: </string>
+    <string name="settings_title">Kauliņu iestatījumi</string>
+    <string name="enable_shaking">Mest ar kratīšanu</string>
+    <string name="vibration_title">Ieslēgt vibrāciju</string>
+    <string name="about">Informācija</string>
+    <string name="version_number">Versija</string>
+    <string name="version">0.9</string>
+</resources>

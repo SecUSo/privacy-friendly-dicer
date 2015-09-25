@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Privacy Friendly Dicer</string>
+    <string name="action_settings">Настройки</string>
+    <string name="roll_button">Бросать Кости</string>
+    <string name="choose_dice_heading">Количество Костей: </string>
+    <string name="settings_title">Настройки Костей</string>
+    <string name="enable_shaking">Трести штобы бросать</string>
+    <string name="vibration_title">Включить вибрацыю</string>
+    <string name="about">Информацыя</string>
+    <string name="version_number">Версия</string>
+    <string name="version">0.9</string>
+</resources>
