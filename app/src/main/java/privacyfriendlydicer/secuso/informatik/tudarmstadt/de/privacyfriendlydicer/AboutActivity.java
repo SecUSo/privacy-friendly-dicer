@@ -18,5 +18,4 @@ public class AboutActivity extends ActionBarActivity{
 
     }
 
-
 }
