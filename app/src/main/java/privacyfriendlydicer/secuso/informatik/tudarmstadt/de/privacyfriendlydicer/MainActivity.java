@@ -1,6 +1,7 @@
 package privacyfriendlydicer.secuso.informatik.tudarmstadt.de.privacyfriendlydicer;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Vibrator;
 import android.content.Context;
 import android.support.v7.app.ActionBarActivity;
@@ -8,6 +9,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.preference.PreferenceManager;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.SeekBar;
@@ -16,8 +18,9 @@ import android.widget.TextView;
 public class MainActivity extends ActionBarActivity {
 
     private ImageView[] imageViews;
-    private boolean shakingEnabled;
-    private boolean vibrationEnabled;
+    boolean shakingEnabled;
+    boolean vibrationEnabled;
+    SharedPreferences sharedPreferences;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,6 +52,7 @@ public class MainActivity extends ActionBarActivity {
                 Dicer dicer = new Dicer();
                 int[] dice = dicer.rollDice(poolSeekBar.getProgress() + 1);
                 initResultDiceViews();
+                loadPreferences();
 
                 final Vibrator vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
 
@@ -61,15 +65,11 @@ public class MainActivity extends ActionBarActivity {
 
     }
 
-    public void setShakingEnabled(boolean b) {
-        this.shakingEnabled = b;
+    public void loadPreferences() {
+        this.sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
+        this.shakingEnabled = sharedPreferences.getBoolean("enable_shaking", true);
+        this.vibrationEnabled = sharedPreferences.getBoolean("enable_vibration", true);
     }
-
-    public void setVibrationEnabled(boolean b) {
-        this.vibrationEnabled = b;
-    }
-
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
