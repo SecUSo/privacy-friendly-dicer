@@ -168,4 +168,19 @@ public class MainActivity extends ActionBarActivity {
         }
 
     }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        sensorManager.registerListener(shakeListener, accelerometer,
+                SensorManager.SENSOR_DELAY_UI);
+        shakingEnabled = sharedPreferences.getBoolean("enable_shaking", true);
+        vibrationEnabled = sharedPreferences.getBoolean("enable_vibration", true);
+    }
+
+    @Override
+    public void onPause() {
+        sensorManager.unregisterListener(shakeListener);
+        super.onPause();
+    }
 }
