@@ -20,7 +20,8 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Preferences" >
+            android:name=".Preferences"
+            android:parentActivityName=".MainActivity">
         </activity>
     </application>
 
