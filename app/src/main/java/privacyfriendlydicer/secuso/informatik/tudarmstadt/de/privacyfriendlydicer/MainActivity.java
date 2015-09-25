@@ -77,17 +77,16 @@ public class MainActivity extends ActionBarActivity {
             }
         });
 
-        if (shakingEnabled) {
-
-            // ShakeDetector initialization
-            sensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
-            accelerometer = sensorManager
+        // ShakeDetector initialization
+        sensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
+        accelerometer = sensorManager
                     .getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
-            shakeListener = new ShakeListener();
-            shakeListener.setOnShakeListener(new ShakeListener.OnShakeListener() {
+        shakeListener = new ShakeListener();
+        shakeListener.setOnShakeListener(new ShakeListener.OnShakeListener() {
 
                 public void onShake(int count) {
 
+                    if (shakingEnabled) {
                     Dicer dicer = new Dicer();
                     int[] dice = dicer.rollDice(poolSeekBar.getProgress() + 1);
                     initResultDiceViews();
@@ -95,10 +94,8 @@ public class MainActivity extends ActionBarActivity {
                     final Vibrator vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
 
                     evaluate(dice, vibrator);
-                }
+                }}
             });
-
-        }
     }
 
     @Override
