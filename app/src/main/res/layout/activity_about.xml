@@ -63,4 +63,9 @@
         android:adjustViewBounds="true"
         android:src="@drawable/secuso_logo_blau_blau" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/privacy_friendly"/>
+
 </LinearLayout>

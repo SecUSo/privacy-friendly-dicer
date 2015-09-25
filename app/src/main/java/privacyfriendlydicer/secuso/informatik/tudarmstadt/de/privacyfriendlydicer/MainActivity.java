@@ -113,12 +113,20 @@ public class MainActivity extends ActionBarActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-
-        Intent intent = new Intent();
-        intent.setClass(this, PreferencesActivity.class);
-        startActivityForResult(intent, 0);
-
-        return true;
+        switch (item.getItemId()) {
+            case R.id.action_settings:
+                Intent intent = new Intent();
+                intent.setClass(this, PreferencesActivity.class);
+                startActivityForResult(intent, 0);
+                return true;
+            case R.id.about:
+                Intent mintent = new Intent();
+                mintent.setClass(this, AboutActivity.class);
+                startActivityForResult(mintent, 0);
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 
     public void initResultDiceViews() {

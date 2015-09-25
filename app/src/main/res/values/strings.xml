@@ -7,9 +7,12 @@
     <string name="enable_shaking">Roll Dice by Shaking</string>
     <string name="vibration_title">Enable Vibration Feedback</string>
     <string name="about">About</string>
-    <string name="version_number">Version</string>
-    <string name="version">0.9</string>
+    <string name="version_number">Version 0.9</string>
     <string name="about_author">Author: Karola Marky</string>
     <string name="about_affiliation">In affiliation with</string>
+    <string name="privacy_friendly">This application belongs to the group of Privacy friendly apps. All
+    Privacy Friendly apps are Open Source, use minimal permissions and are optimized regarding user privacy.
+    Neither tracking mechanisms nor advertisement is included. More information
+    can be found on:</string>
 
 </resources>
