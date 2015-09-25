@@ -9,4 +9,7 @@
     <string name="about">About</string>
     <string name="version_number">Version</string>
     <string name="version">0.9</string>
+    <string name="about_author">Author: Karola Marky</string>
+    <string name="about_affiliation">In affiliation with</string>
+
 </resources>
