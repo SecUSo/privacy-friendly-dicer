@@ -26,6 +26,8 @@ public class MainActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
+
         Button rollDiceButton = (Button) findViewById(R.id.rollButton);
 
         final SeekBar poolSeekBar = (SeekBar) findViewById(R.id.seekBar);
@@ -52,23 +54,20 @@ public class MainActivity extends ActionBarActivity {
                 Dicer dicer = new Dicer();
                 int[] dice = dicer.rollDice(poolSeekBar.getProgress() + 1);
                 initResultDiceViews();
-                loadPreferences();
+
+                shakingEnabled = sharedPreferences.getBoolean("enable_shaking", true);
+                vibrationEnabled = sharedPreferences.getBoolean("enable_vibration", true);
 
                 final Vibrator vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
 
                 for (int i = 0; i < dice.length; i++) {
                         switchDice(imageViews[i], dice[i]);
-                        vibrator.vibrate(50);
+                        if (vibrationEnabled) {
+                            vibrator.vibrate(50);}
                 }
             }
         });
 
-    }
-
-    public void loadPreferences() {
-        this.sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
-        this.shakingEnabled = sharedPreferences.getBoolean("enable_shaking", true);
-        this.vibrationEnabled = sharedPreferences.getBoolean("enable_vibration", true);
     }
 
     @Override
