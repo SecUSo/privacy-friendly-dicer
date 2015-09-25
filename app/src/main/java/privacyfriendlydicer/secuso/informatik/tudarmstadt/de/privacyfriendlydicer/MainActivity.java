@@ -2,6 +2,8 @@ package privacyfriendlydicer.secuso.informatik.tudarmstadt.de.privacyfriendlydic
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.hardware.Sensor;
 import android.hardware.SensorManager;
 import android.os.Vibrator;
@@ -36,6 +38,7 @@ public class MainActivity extends ActionBarActivity {
         android.support.v7.app.ActionBar actionBar = getSupportActionBar();
         actionBar.setHomeAsUpIndicator(R.mipmap.ic_launcher);
         actionBar.setDisplayHomeAsUpEnabled(true);
+        actionBar.setBackgroundDrawable(new ColorDrawable(Color.parseColor("#024265")));
 
 
         sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getBaseContext());

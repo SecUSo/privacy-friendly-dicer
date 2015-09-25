@@ -1,5 +1,7 @@
 package privacyfriendlydicer.secuso.informatik.tudarmstadt.de.privacyfriendlydicer;
 
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 
@@ -16,6 +18,7 @@ public class AboutActivity extends ActionBarActivity{
         actionBar.setDisplayHomeAsUpEnabled(true);
         actionBar.setTitle(R.string.about);
         actionBar.setDisplayHomeAsUpEnabled(true);
+        actionBar.setBackgroundDrawable(new ColorDrawable(Color.parseColor("#024265")));
 
     }
 

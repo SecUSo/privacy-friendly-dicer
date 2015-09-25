@@ -1,5 +1,7 @@
 package privacyfriendlydicer.secuso.informatik.tudarmstadt.de.privacyfriendlydicer;
 
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
@@ -18,6 +20,7 @@ public class PreferencesActivity extends ActionBarActivity{
         android.support.v7.app.ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
         actionBar.setTitle(R.string.action_settings);
+        actionBar.setBackgroundDrawable(new ColorDrawable(Color.parseColor("#024265")));
 
         getFragmentManager().beginTransaction().replace(android.R.id.content,
                 new SettingsFragment()).commit();
