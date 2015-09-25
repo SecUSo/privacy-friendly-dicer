@@ -1,5 +1,6 @@
 package privacyfriendlydicer.secuso.informatik.tudarmstadt.de.privacyfriendlydicer;
 
+import android.content.Intent;
 import android.os.Vibrator;
 import android.content.Context;
 import android.support.v7.app.ActionBarActivity;
@@ -67,17 +68,12 @@ public class MainActivity extends ActionBarActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
+        Intent intent = new Intent();
+        intent.setClass(this, Preferences.class);
+        startActivityForResult(intent, 0);
 
-        return super.onOptionsItemSelected(item);
+        return true;
     }
 
     public void initResultDiceViews() {
