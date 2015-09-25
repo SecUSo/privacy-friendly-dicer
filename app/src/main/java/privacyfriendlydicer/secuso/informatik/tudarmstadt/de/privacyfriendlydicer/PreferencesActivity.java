@@ -8,7 +8,7 @@ import android.view.MenuItem;
 /**
  * Created by yonjuni on 31.08.15.
  */
-public class Preferences extends ActionBarActivity{
+public class PreferencesActivity extends ActionBarActivity{
 
 
     @Override

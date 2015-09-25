@@ -115,7 +115,7 @@ public class MainActivity extends ActionBarActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
 
         Intent intent = new Intent();
-        intent.setClass(this, Preferences.class);
+        intent.setClass(this, PreferencesActivity.class);
         startActivityForResult(intent, 0);
 
         return true;
