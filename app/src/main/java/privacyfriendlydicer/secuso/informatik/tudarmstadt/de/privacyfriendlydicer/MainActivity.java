@@ -36,7 +36,7 @@ public class MainActivity extends ActionBarActivity {
         setContentView(R.layout.activity_main);
 
         android.support.v7.app.ActionBar actionBar = getSupportActionBar();
-        actionBar.setHomeAsUpIndicator(R.mipmap.ic_launcher);
+        actionBar.setHomeAsUpIndicator(R.mipmap.logo_actionbar);
         actionBar.setDisplayHomeAsUpEnabled(true);
         actionBar.setBackgroundDrawable(new ColorDrawable(Color.parseColor("#024265")));
 
@@ -66,16 +66,10 @@ public class MainActivity extends ActionBarActivity {
         rollDiceButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Dicer dicer = new Dicer();
-                int[] dice = dicer.rollDice(poolSeekBar.getProgress() + 1);
-                initResultDiceViews();
-
-                shakingEnabled = sharedPreferences.getBoolean("enable_shaking", true);
-                vibrationEnabled = sharedPreferences.getBoolean("enable_vibration", true);
 
                 final Vibrator vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
 
-                evaluate(dice, vibrator);
+                evaluate(vibrator, poolSeekBar.getProgress() + 1);
 
             }
         });
@@ -87,18 +81,15 @@ public class MainActivity extends ActionBarActivity {
         shakeListener = new ShakeListener();
         shakeListener.setOnShakeListener(new ShakeListener.OnShakeListener() {
 
-                public void onShake(int count) {
+            public void onShake(int count) {
 
-                    if (shakingEnabled) {
-                    Dicer dicer = new Dicer();
-                    int[] dice = dicer.rollDice(poolSeekBar.getProgress() + 1);
-                    initResultDiceViews();
-
+                if (shakingEnabled) {
                     final Vibrator vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
 
-                    evaluate(dice, vibrator);
-                }}
-            });
+                    evaluate(vibrator, poolSeekBar.getProgress() + 1);
+                }
+            }
+        });
     }
 
     @Override
@@ -174,7 +165,14 @@ public class MainActivity extends ActionBarActivity {
 
     }
 
-    public void evaluate (int[] dice, Vibrator vibrator) {
+    public void evaluate (Vibrator vibrator, int diceNumber) {
+
+        shakingEnabled = sharedPreferences.getBoolean("enable_shaking", true);
+        vibrationEnabled = sharedPreferences.getBoolean("enable_vibration", true);
+
+        Dicer dicer = new Dicer();
+        int[] dice = dicer.rollDice(diceNumber);
+        initResultDiceViews();
 
         for (int i = 0; i < dice.length; i++) {
             switchDice(imageViews[i], dice[i]);
@@ -191,8 +189,6 @@ public class MainActivity extends ActionBarActivity {
         super.onResume();
         sensorManager.registerListener(shakeListener, accelerometer,
                 SensorManager.SENSOR_DELAY_UI);
-        shakingEnabled = sharedPreferences.getBoolean("enable_shaking", true);
-        vibrationEnabled = sharedPreferences.getBoolean("enable_vibration", true);
     }
 
     @Override
