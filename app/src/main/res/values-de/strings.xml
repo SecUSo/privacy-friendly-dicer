@@ -4,7 +4,7 @@
     <string name="roll_button">Würfeln</string>
     <string name="choose_dice_heading">Anzahl der Würfel: </string>
     <string name="settings_title">Würfeleinstellungen</string>
-    <string name="enable_shaking">Würfeln durch Schütteln des Smartphones</string>
+    <string name="enable_shaking">Würfeln durch Schütteln</string>
     <string name="vibration_title">Vibrieren</string>
     <string name="about">Über</string>
     <string name="version_number">Version 0.9</string>
