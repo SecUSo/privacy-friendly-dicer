@@ -8,9 +8,9 @@
     <string name="vibration_title">Ieslēgt vibrāciju</string>
     <string name="about">Informācija</string>
     <string name="version_number">Versija 0.9</string>
-    <string name="about_author">Author: Karola Marky</string>
-    <string name="about_affiliation">In affiliation with</string>
-    <string name="privacy_friendly">This application belongs to the Privacy Friendly Apps.</string>
-    <string name="more_info">More information can be found on (in English):</string>
-    <string name="url"><a href="https://secuso.org">secuso.org</a></string>
+    <string name="about_author">Autors: Karola Marky</string>
+    <string name="about_affiliation">Sadarbībā ar</string>
+    <string name="privacy_friendly">Šī aplikācija ir no Privacy Friendly Apps aplikāciju kataloga.</string>
+    <string name="more_info">Papildus informācija (angļu valodā):</string>
+    <string name="url"><a href="https://www.secuso.informatik.tu-darmstadt.de/en/research/results/">secuso.org</a></string>
 </resources>
