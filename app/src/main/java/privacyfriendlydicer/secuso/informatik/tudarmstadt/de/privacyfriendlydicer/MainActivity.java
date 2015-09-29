@@ -10,12 +10,15 @@ import android.os.Vibrator;
 import android.content.Context;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.view.Display;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.preference.PreferenceManager;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
@@ -137,24 +140,25 @@ public class MainActivity extends ActionBarActivity {
     }
 
     public void switchDice(ImageView imageView, int result) {
+
         switch (result) {
             case 1:
-                imageView.setImageResource(R.drawable.ws1);
+                imageView.setImageResource(R.drawable.d1);
                 break;
             case 2:
-                imageView.setImageResource(R.drawable.ws2);
+                imageView.setImageResource(R.drawable.d2);
                 break;
             case 3:
-                imageView.setImageResource(R.drawable.ws3);
+                imageView.setImageResource(R.drawable.d3);
                 break;
             case 4:
-                imageView.setImageResource(R.drawable.ws4);
+                imageView.setImageResource(R.drawable.d4);
                 break;
             case 5:
-                imageView.setImageResource(R.drawable.ws5);
+                imageView.setImageResource(R.drawable.d5);
                 break;
             case 6:
-                imageView.setImageResource(R.drawable.ws6);
+                imageView.setImageResource(R.drawable.d6);
                 break;
             case 0:
                 imageView.setImageResource(0);
@@ -170,12 +174,18 @@ public class MainActivity extends ActionBarActivity {
         shakingEnabled = sharedPreferences.getBoolean("enable_shaking", true);
         vibrationEnabled = sharedPreferences.getBoolean("enable_vibration", true);
 
+        Display display = getWindowManager().getDefaultDisplay();
+
         Dicer dicer = new Dicer();
         int[] dice = dicer.rollDice(diceNumber);
         initResultDiceViews();
 
         for (int i = 0; i < dice.length; i++) {
             switchDice(imageViews[i], dice[i]);
+            android.view.ViewGroup.LayoutParams layoutParams = imageViews[i].getLayoutParams();
+            layoutParams.width = display.getWidth() / 6;;
+            layoutParams.height = display.getWidth() / 6;;
+            imageViews[i].setLayoutParams(layoutParams);
             if (vibrationEnabled) {
                 vibrator.vibrate(50);
             }
