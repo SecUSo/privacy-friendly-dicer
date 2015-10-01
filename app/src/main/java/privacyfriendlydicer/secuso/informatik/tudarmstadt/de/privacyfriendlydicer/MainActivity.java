@@ -17,8 +17,6 @@ import android.view.View;
 import android.preference.PreferenceManager;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
@@ -38,21 +36,19 @@ public class MainActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //ActionBar
         android.support.v7.app.ActionBar actionBar = getSupportActionBar();
         actionBar.setHomeAsUpIndicator(R.mipmap.logo_actionbar);
         actionBar.setDisplayHomeAsUpEnabled(true);
         actionBar.setBackgroundDrawable(new ColorDrawable(Color.parseColor("#024265")));
 
-
+        //Preferences
         sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
 
-        Button rollDiceButton = (Button) findViewById(R.id.rollButton);
-
+        //Seekbar
         final SeekBar poolSeekBar = (SeekBar) findViewById(R.id.seekBar);
 
-        SeekBar seekBarLength = (SeekBar) findViewById(R.id.seekBar);
-
-        seekBarLength.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+        poolSeekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 TextView textViewLengthDisplay =
                         (TextView) findViewById(R.id.chooseDiceNumber);
@@ -66,30 +62,28 @@ public class MainActivity extends ActionBarActivity {
             }
         });
 
+        //Button
+        Button rollDiceButton = (Button) findViewById(R.id.rollButton);
+
         rollDiceButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                final Vibrator vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
-
-                evaluate(vibrator, poolSeekBar.getProgress() + 1);
+                evaluate((Vibrator) getSystemService(Context.VIBRATOR_SERVICE), poolSeekBar.getProgress() + 1);
 
             }
         });
 
-        // ShakeDetector initialization
+        //Shaking
         sensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
         accelerometer = sensorManager
-                    .getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
+                .getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
         shakeListener = new ShakeListener();
         shakeListener.setOnShakeListener(new ShakeListener.OnShakeListener() {
 
             public void onShake(int count) {
 
                 if (shakingEnabled) {
-                    final Vibrator vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
-
-                    evaluate(vibrator, poolSeekBar.getProgress() + 1);
+                    evaluate((Vibrator) getSystemService(Context.VIBRATOR_SERVICE), poolSeekBar.getProgress() + 1);
                 }
             }
         });
@@ -103,16 +97,15 @@ public class MainActivity extends ActionBarActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+        Intent intent = new Intent();
         switch (item.getItemId()) {
             case R.id.action_settings:
-                Intent intent = new Intent();
                 intent.setClass(this, PreferencesActivity.class);
                 startActivityForResult(intent, 0);
                 return true;
             case R.id.about:
-                Intent mintent = new Intent();
-                mintent.setClass(this, AboutActivity.class);
-                startActivityForResult(mintent, 0);
+                intent.setClass(this, AboutActivity.class);
+                startActivityForResult(intent, 0);
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
@@ -168,22 +161,22 @@ public class MainActivity extends ActionBarActivity {
 
     }
 
-    public void evaluate (Vibrator vibrator, int diceNumber) {
+    public void evaluate(Vibrator vibrator, int diceNumber) {
 
-        shakingEnabled = sharedPreferences.getBoolean("enable_shaking", true);
-        vibrationEnabled = sharedPreferences.getBoolean("enable_vibration", true);
-
-        Display display = getWindowManager().getDefaultDisplay();
+        applySettings();
 
         Dicer dicer = new Dicer();
         int[] dice = dicer.rollDice(diceNumber);
         initResultDiceViews();
 
+        Display display = getWindowManager().getDefaultDisplay();
+
         for (int i = 0; i < dice.length; i++) {
             switchDice(imageViews[i], dice[i]);
             android.view.ViewGroup.LayoutParams layoutParams = imageViews[i].getLayoutParams();
-            layoutParams.width = display.getWidth() / 6;;
-            layoutParams.height = display.getWidth() / 6;;
+            layoutParams.width = display.getWidth() / 6;
+            layoutParams.height = display.getWidth() / 6;
+
             imageViews[i].setLayoutParams(layoutParams);
             if (vibrationEnabled) {
                 vibrator.vibrate(50);
@@ -193,14 +186,18 @@ public class MainActivity extends ActionBarActivity {
 
     }
 
+    public void applySettings() {
+        shakingEnabled = sharedPreferences.getBoolean("enable_shaking", true);
+        vibrationEnabled = sharedPreferences.getBoolean("enable_vibration", true);
+    }
+
     @Override
     public void onResume() {
         super.onResume();
         sensorManager.registerListener(shakeListener, accelerometer,
                 SensorManager.SENSOR_DELAY_UI);
 
-        shakingEnabled = sharedPreferences.getBoolean("enable_shaking", true);
-        vibrationEnabled = sharedPreferences.getBoolean("enable_vibration", true);
+        applySettings();
 
     }
 
