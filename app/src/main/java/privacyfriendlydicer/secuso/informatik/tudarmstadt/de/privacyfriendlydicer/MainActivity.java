@@ -198,6 +198,10 @@ public class MainActivity extends ActionBarActivity {
         super.onResume();
         sensorManager.registerListener(shakeListener, accelerometer,
                 SensorManager.SENSOR_DELAY_UI);
+
+        shakingEnabled = sharedPreferences.getBoolean("enable_shaking", true);
+        vibrationEnabled = sharedPreferences.getBoolean("enable_vibration", true);
+
     }
 
     @Override
