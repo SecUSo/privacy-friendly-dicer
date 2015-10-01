@@ -66,7 +66,6 @@ public class MainActivity extends ActionBarActivity {
         Button rollDiceButton = (Button) findViewById(R.id.rollButton);
 
         rollDiceButton.setOnClickListener(new View.OnClickListener() {
-            @Override
             public void onClick(View v) {
                 evaluate((Vibrator) getSystemService(Context.VIBRATOR_SERVICE), poolSeekBar.getProgress() + 1);
 
@@ -95,7 +94,6 @@ public class MainActivity extends ActionBarActivity {
         return true;
     }
 
-    @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         Intent intent = new Intent();
         switch (item.getItemId()) {
@@ -110,6 +108,8 @@ public class MainActivity extends ActionBarActivity {
             default:
                 return super.onOptionsItemSelected(item);
         }
+
+
     }
 
     public void initResultDiceViews() {
