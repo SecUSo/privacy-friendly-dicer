@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">Privacy Friendly Dicer</string>
+    <string name="app_name_short">Dicer</string>
     <string name="action_settings">設定</string>
     <string name="roll_button">さいころを転がす</string>
     <string name="choose_dice_heading">さいころの数： </string>
