@@ -40,6 +40,7 @@ public class MainActivity extends ActionBarActivity {
         android.support.v7.app.ActionBar actionBar = getSupportActionBar();
         actionBar.setHomeAsUpIndicator(R.mipmap.ic_launcher);
         actionBar.setDisplayHomeAsUpEnabled(true);
+        actionBar.setTitle(R.string.app_name_long);
         actionBar.setBackgroundDrawable(new ColorDrawable(Color.parseColor("#024265")));
 
         //Preferences
