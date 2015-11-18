@@ -1,4 +1,4 @@
-package privacyfriendlydicer.secuso.informatik.tudarmstadt.de.privacyfriendlydicer;
+package org.secuso.privacyfriendlydicer;
 
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;

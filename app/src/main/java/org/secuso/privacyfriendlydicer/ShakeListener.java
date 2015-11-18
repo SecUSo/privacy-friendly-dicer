@@ -1,4 +1,4 @@
-package privacyfriendlydicer.secuso.informatik.tudarmstadt.de.privacyfriendlydicer;
+package org.secuso.privacyfriendlydicer;
 
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;

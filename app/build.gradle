@@ -5,7 +5,7 @@ android {
     buildToolsVersion "22.0.1"
 
     defaultConfig {
-        applicationId "privacyfriendlydicer.secuso.informatik.tudarmstadt.de.privacyfriendlydicer"
+        applicationId "org.secuso.privacyfriendlydicer"
         minSdkVersion 14
         targetSdkVersion 22
         versionCode 1

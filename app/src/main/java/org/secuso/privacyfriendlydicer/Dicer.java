@@ -1,4 +1,4 @@
-package privacyfriendlydicer.secuso.informatik.tudarmstadt.de.privacyfriendlydicer;
+package org.secuso.privacyfriendlydicer;
 
 /**
  * Created by yonjuni on 5/6/15.

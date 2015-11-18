@@ -1,10 +1,9 @@
-package privacyfriendlydicer.secuso.informatik.tudarmstadt.de.privacyfriendlydicer;
+package org.secuso.privacyfriendlydicer;
 
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
-
 /**
  * Created by yonjuni on 25.08.15.
  */

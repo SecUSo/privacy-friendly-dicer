@@ -1,4 +1,4 @@
-package privacyfriendlydicer.secuso.informatik.tudarmstadt.de.privacyfriendlydicer;
+package org.secuso.privacyfriendlydicer;
 
 import android.os.Bundle;
 import android.preference.PreferenceFragment;
