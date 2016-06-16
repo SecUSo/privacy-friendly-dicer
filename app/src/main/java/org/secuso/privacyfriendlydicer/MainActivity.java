@@ -31,6 +31,8 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.TextView;
+import android.view.animation.AlphaAnimation;
+import android.view.animation.Animation;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -117,6 +119,16 @@ public class MainActivity extends AppCompatActivity
         });
     }
 
+    public void flashResult(ImageView imageView) {
+
+        Animation animation = new AlphaAnimation(0.0f, 1.0f);
+        animation.setDuration(500);
+        animation.setStartOffset(20);
+        animation.setRepeatMode(Animation.REVERSE);
+        imageView.startAnimation(animation);
+
+    }
+
     public void initResultDiceViews() {
         imageViews = new ImageView[10];
 
@@ -183,6 +195,7 @@ public class MainActivity extends AppCompatActivity
             layoutParams.height = display.getWidth() / 6;
 
             imageViews[i].setLayoutParams(layoutParams);
+            flashResult(imageViews[i]);
             if (vibrationEnabled) {
                 vibrator.vibrate(50);
             }
