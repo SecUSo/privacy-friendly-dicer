@@ -20,9 +20,9 @@
     <string name="url"><a href="https://www.secuso.org/pfa">https://www.secuso.org/pfa</a></string>
 
     <!-- Help-->
+    <string name="help_general">General</string>
+    <string name="help_general_description">Privacy Friendly Dicer can be used to roll between one and ten six-sided dice. Please, choose the number of dice with slider. </string>
     <string name="help_privacy_heading">Privacy Info</string>
-    <string name="help_pin_storage_heading">Password Storage</string>
-    <string name="help_pin_storage_description">Your password is neither stored nor transmitted</string>
     <string name="help_permissions_heading">Permissions</string>
-    <string name="help_permissions_description">Privacy Friendly Passwordgenerator does not use any permissions</string>
+    <string name="help_permissions_description">Privacy Friendly Dicer uses the vibration permission to enable feedback.</string>
 </resources>
