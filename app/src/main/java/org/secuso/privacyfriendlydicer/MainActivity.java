@@ -274,6 +274,11 @@ public class MainActivity extends AppCompatActivity
                 intent = new Intent(this, HelpActivity.class);
                 startActivityForResult(intent, 0);
                 return true;
+
+            case R.id.nav_settimgs:
+                intent = new Intent(this, SettingsActivity.class);
+                startActivityForResult(intent, 0);
+                return true;
             default:
         }
 
