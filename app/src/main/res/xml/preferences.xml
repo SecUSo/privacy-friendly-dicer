@@ -3,12 +3,12 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
     <PreferenceCategory android:title="@string/settings_title">
-        <CheckBoxPreference
+        <SwitchPreference
             android:id="@+id/enableShaking"
             android:key="enable_shaking"
             android:title="@string/enable_shaking"
             android:defaultValue="true" />
-        <CheckBoxPreference
+        <SwitchPreference
             android:id="@+id/enableVibration"
             android:key="enable_vibration"
             android:title="@string/vibration_title"

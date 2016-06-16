@@ -5,7 +5,7 @@
         <Preference
             android:summary="@string/help_general_description" />
     </PreferenceCategory>
-    
+
     <PreferenceCategory android:title="@string/help_privacy_heading">
         <Preference
             android:summary="@string/help_permissions_description"
