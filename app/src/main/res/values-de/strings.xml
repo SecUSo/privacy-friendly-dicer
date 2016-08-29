@@ -1,0 +1,43 @@
+<resources>
+
+    <string name="app_name">Würfel</string>
+    <string name="app_name_long">Privacy Friendly Würfel</string>
+
+    <!-- Navigation Drawer-->
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <!-- MainActivity-->
+    <string name="roll_button">Würfeln</string>
+    <string name="choose_dice_heading">Anzahl der Würfel: </string>
+
+    <!--Settings-->
+    <string name="action_settings">Einstellungen</string>
+    <string name="settings_title">Würfeleinstellungen</string>
+    <string name="enable_shaking">Durch Schütteln würfeln</string>
+    <string name="vibration_title">Vibrieren</string>
+
+    <!--About-->
+    <string name="about">Über</string>
+    <string name="version_number">Version 1.3</string>
+    <string name="about_author">Autor: Karola Marky und Mitwirkende.</string>
+    <string name="about_affiliation">In Zusammenarbeit mit</string>
+    <string name="privacy_friendly">Diese App gehört zur Gruppe der Privacy Friendly Apps entwickelt von der Technischen Universität Darmstadt. Quelltext lizenziert unter GPLv3. Bilder copyright TU Darmstadt und Google Inc.</string>
+    <string name="more_info">Weitere Infos unter:</string>
+    <string name="github" translatable="false"><a href="https://github.com/SecUSo/privacy-friendly-dicer">Github-Repo</a></string>
+    <string name="url" translatable="false"><a href="https://www.secuso.org/pfa">SECUSO-Webseite</a></string>
+
+    <!-- Help-->
+    <string name="help_general">Allgemein</string>
+    <string name="help_general_description">Privacy Friendly Würfel kann zwischen einem und zehn sechsseitigen Würfeln würfeln. Die Anzahl kann über den Slider bestimmt werden. </string>
+    <string name="help_general_dicing">Durch Drücken des Drücken oder Schütteln des Geräts, falls in den Einstellungen aktiviert, kann gewürfelt werden.</string>
+    <string name="help_privacy_heading">Datenschutzinfo</string>
+    <string name="help_permissions_heading">Berechtigungen</string>
+    <string name="help_permissions_description">Privacy Friendly Würfel nutzt die Berechtigung "Vibration" muss Feedback zu ermöglichen. Diese Berechtigung kann der App ohne Probleme entzogen werden.</string>
+
+    <!-- WelcomeDialog-->
+    <string name="welcome_title">Willkommen</string>
+    <string name="welcome_description">Willkommen zu Privacy Friendly Würfel. Die Anzahl der Würfel kann über den Slider gewählt werden. Zum Würfeln kann entweder der Button gedrückt oder das Gerät geschüttelt werden.</string>
+    <string name="confirm_button">OKAY</string>
+    <string name="help_button">Zur Hilfe</string>
+</resources>
