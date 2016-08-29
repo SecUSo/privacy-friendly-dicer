@@ -4,6 +4,8 @@
     <PreferenceCategory android:title="@string/help_general">
         <Preference
             android:summary="@string/help_general_description" />
+        <Preference
+            android:summary="@string/help_general_dicing" />
     </PreferenceCategory>
 
     <PreferenceCategory android:title="@string/help_privacy_heading">

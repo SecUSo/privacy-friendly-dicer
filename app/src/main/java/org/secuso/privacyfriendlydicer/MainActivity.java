@@ -273,6 +273,7 @@ public class MainActivity extends AppCompatActivity
 
         alertDialog.setMessage(R.string.welcome_description);
 
+        //TODO insert app icon
         alertDialog.setIcon(R.drawable.ic_menu_settings);
 
         alertDialog.setPositiveButton(getString(R.string.confirm_button), new DialogInterface.OnClickListener() {

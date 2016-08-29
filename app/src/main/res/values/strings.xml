@@ -29,8 +29,8 @@
 
     <!-- Help-->
     <string name="help_general">General</string>
-    <string name="help_general_description">Privacy Friendly Dicer can be used to roll between one and ten six-sided dice. Choose the number of dice with slider and press the button to roll the dice.
-    If enabled in the settings the dice can also be rolled by shaking the smartphone.</string>
+    <string name="help_general_description">Privacy Friendly Dicer can be used to roll between one and ten six-sided dice. Choose the number of dice with slider. </string>
+    <string name="help_general_dicing">Press the button to roll the dice. If enabled in the settings the dice can also be rolled by shaking the smartphone.</string>
     <string name="help_privacy_heading">Privacy Info</string>
     <string name="help_permissions_heading">Permissions</string>
     <string name="help_permissions_description">Privacy Friendly Dicer uses the vibration permission to enable feedback.</string>
