@@ -22,15 +22,15 @@
     <string name="version_number">Version 1.3</string>
     <string name="about_author">Author: Karola Marky and contributors.</string>
     <string name="about_affiliation">In affiliation with</string>
-    <string name="privacy_friendly">This application belongs to the group of Privacy Friendly Apps developed by Technische Universität Darmstadt. Sourcecode licensed under GPLv3. Images copyright TU Darmstadt and Google Inc.</string>
+    <string name="privacy_friendly">This application belongs to the Privacy Friendly Apps group developed by Technische Universität Darmstadt. Sourcecode licensed under GPLv3. Images copyright TU Darmstadt and Google Inc.</string>
     <string name="more_info">More information can be found on:</string>
     <string name="github" translatable="false"><a href="https://github.com/SecUSo/privacy-friendly-dicer">Github-Repo</a></string>
     <string name="url" translatable="false"><a href="https://www.secuso.org/pfa">SECUSO-Website</a></string>
 
     <!-- Help-->
     <string name="help_general">General</string>
-    <string name="help_general_description">Privacy Friendly Dicer can be used to roll between one and ten six-sided dice. Choose the number of dice with slider. </string>
-    <string name="help_general_dicing">Press the button to roll the dice. If enabled in the settings the dice can also be rolled by shaking the smartphone.</string>
+    <string name="help_general_description">Privacy Friendly Dicer can be used to roll between one and ten six-sided dice. Choose the number of dice with the slider. </string>
+    <string name="help_general_dicing">Press the button to roll the dice. The dice can also be rolled by shaking the smartphone if have enabled this in the settings.</string>
     <string name="help_privacy_heading">Privacy Info</string>
     <string name="help_permissions_heading">Permissions</string>
     <string name="help_permissions_description">Privacy Friendly Dicer uses the vibration permission to enable feedback.</string>
