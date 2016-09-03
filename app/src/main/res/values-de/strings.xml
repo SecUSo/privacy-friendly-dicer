@@ -3,6 +3,10 @@
     <string name="app_name">Würfel</string>
     <string name="app_name_long">Privacy Friendly Würfel</string>
 
+    <string name="action_settings">Einstellungen</string>
+    <string name="action_about">Über</string>
+    <string name="action_help">Hilfe</string>
+
     <!-- Navigation Drawer-->
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -12,7 +16,6 @@
     <string name="choose_dice_heading">Anzahl der Würfel: </string>
 
     <!--Settings-->
-    <string name="action_settings">Einstellungen</string>
     <string name="settings_title">Würfeleinstellungen</string>
     <string name="enable_shaking">Durch Schütteln würfeln</string>
     <string name="vibration_title">Vibrieren</string>
@@ -37,7 +40,7 @@
 
     <!-- WelcomeDialog-->
     <string name="welcome_title">Willkommen</string>
-    <string name="welcome_description">Willkommen zu Privacy Friendly Würfel. Die Anzahl der Würfel kann über den Slider gewählt werden. Zum Würfeln kann entweder der Button gedrückt oder das Gerät geschüttelt werden.</string>
+    <string name="welcome_description">Die Anzahl der Würfel kann über den Slider gewählt werden. Zum Würfeln kann entweder der Button gedrückt oder das Gerät geschüttelt werden.</string>
     <string name="confirm_button">OKAY</string>
     <string name="help_button">Zur Hilfe</string>
 </resources>
