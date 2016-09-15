@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
-
-    <PreferenceCategory android:title="@string/settings_title">
         <SwitchPreference
             android:id="@+id/enableShaking"
             android:key="enable_shaking"
@@ -13,5 +11,4 @@
             android:key="enable_vibration"
             android:title="@string/vibration_title"
             android:defaultValue="true" />
-    </PreferenceCategory>
 </PreferenceScreen>

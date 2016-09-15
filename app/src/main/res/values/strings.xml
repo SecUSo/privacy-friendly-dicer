@@ -36,7 +36,7 @@
     <string name="help_general_dicing">Press the button to roll the dice. The dice can also be rolled by shaking the smartphone if have enabled this in the settings.</string>
     <string name="help_privacy_heading">Privacy Info</string>
     <string name="help_permissions_heading">Permissions</string>
-    <string name="help_permissions_description">Privacy Friendly Dicer uses the vibration permission to enable feedback.</string>
+    <string name="help_permissions_description">Privacy Friendly Dicer uses the vibration permission to enable feedback after displaying a new result. If the permission is not granted the device will not vibrate.</string>
 
     <!-- WelcomeDialog-->
     <string name="welcome_title">Welcome</string>
