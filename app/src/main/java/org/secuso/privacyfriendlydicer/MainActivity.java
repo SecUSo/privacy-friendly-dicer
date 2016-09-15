@@ -1,10 +1,6 @@
 package org.secuso.privacyfriendlydicer;
 
-import android.app.Activity;
 import android.app.AlertDialog;
-import android.app.Dialog;
-import android.app.DialogFragment;
-import android.app.FragmentTransaction;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -21,7 +17,6 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Display;
-import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.animation.AlphaAnimation;
@@ -273,8 +268,7 @@ public class MainActivity extends AppCompatActivity
 
         alertDialog.setMessage(R.string.welcome_description);
 
-        //TODO insert app icon
-        alertDialog.setIcon(R.drawable.ic_menu_settings);
+        alertDialog.setIcon(R.mipmap.drawer_icon_dicer);
 
         alertDialog.setPositiveButton(getString(R.string.confirm_button), new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog,int which) {

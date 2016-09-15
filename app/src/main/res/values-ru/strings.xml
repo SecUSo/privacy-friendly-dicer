@@ -36,7 +36,7 @@
     <string name="help_general_dicing">Нажмите на кнопку, чтобы бросить кость. Кость также можно бросить с помощью встряхивания телефона, если эта опция включена в установках. </string>
     <string name="help_privacy_heading">Информация по использованию персональных данных</string>
     <string name="help_permissions_heading">Разрешения</string>
-    <string name="help_permissions_description">Privacy Friendly Dicer uses the vibration permission to enable feedback.</string>
+    <string name="help_permissions_description">Privacy Friendly Кости использует разрешение для вибрации в целях обратной связи.</string>
 
     <!-- WelcomeDialog-->
     <string name="welcome_title">Добро пожаловать</string>
