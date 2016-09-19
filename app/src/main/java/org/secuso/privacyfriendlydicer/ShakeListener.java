@@ -42,7 +42,7 @@ public class ShakeListener implements SensorEventListener {
             float gY = y / SensorManager.GRAVITY_EARTH;
             float gZ = z / SensorManager.GRAVITY_EARTH;
 
-            float gForce = FloatMath.sqrt(gX * gX + gY * gY + gZ * gZ);
+            float gForce = (float)Math.sqrt(gX * gX + gY * gY + gZ * gZ);
 
             if (gForce > SHAKE_THRESHOLD_GRAVITY) {
                 final long now = System.currentTimeMillis();

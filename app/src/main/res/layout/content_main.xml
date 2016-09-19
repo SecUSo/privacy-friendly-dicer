@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="org.secuso.privacyfriendlydicer.MainActivity"
+    tools:showIn="@layout/app_bar_main">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:text="@string/choose_dice_heading"
+        android:id="@+id/chooseDiceHeading"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="50dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/chooseDiceNumber"
+        android:textSize="18sp"
+        android:text="6"
+        android:layout_toRightOf="@+id/chooseDiceHeading"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="5dp"/>
+
+    <SeekBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/seekBar"
+        android:layout_below="@+id/chooseDiceHeading"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:max="9"
+        android:progress="5"
+        android:layout_marginTop="10dp" />
+
+    <Button
+        android:id="@+id/rollButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/seekBar"
+        android:text="@string/roll_button"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:background="@drawable/button_fullwidth"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rollButton"
+        android:id="@+id/resultOne"
+        android:layout_marginTop="70dp"
+        />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rollButton"
+        android:layout_toRightOf="@+id/resultOne"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="70dp"
+        android:id="@+id/resultTwo"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rollButton"
+        android:layout_toRightOf="@+id/resultTwo"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="70dp"
+        android:id="@+id/resultThree"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rollButton"
+        android:layout_toRightOf="@+id/resultThree"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="70dp"
+        android:id="@+id/resultFour"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rollButton"
+        android:layout_toRightOf="@+id/resultFour"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="70dp"
+        android:id="@+id/resultFive"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/resultOne"
+        android:layout_marginTop="40dp"
+        android:id="@+id/resultSix"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/resultOne"
+        android:layout_toRightOf="@+id/resultSix"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="6dp"
+        android:id="@+id/resultSeven"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/resultOne"
+        android:layout_toRightOf="@+id/resultSeven"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="6dp"
+        android:id="@+id/resultEight"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/resultOne"
+        android:layout_toRightOf="@+id/resultEight"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="6dp"
+        android:id="@+id/resultNine"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/resultOne"
+        android:layout_toRightOf="@+id/resultNine"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="6dp"
+        android:id="@+id/resultTen"/>
+</RelativeLayout>

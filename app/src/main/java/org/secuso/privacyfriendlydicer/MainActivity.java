@@ -1,26 +1,33 @@
 package org.secuso.privacyfriendlydicer;
 
+import android.app.AlertDialog;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
 import android.hardware.Sensor;
 import android.hardware.SensorManager;
-import android.os.Vibrator;
-import android.content.Context;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.os.Vibrator;
+import android.preference.PreferenceManager;
+import android.support.design.widget.NavigationView;
+import android.support.v4.view.GravityCompat;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.Display;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.preference.PreferenceManager;
+import android.view.animation.AlphaAnimation;
+import android.view.animation.Animation;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends AppCompatActivity
+        implements NavigationView.OnNavigationItemSelectedListener {
 
     private ImageView[] imageViews;
     boolean shakingEnabled;
@@ -32,16 +39,24 @@ public class MainActivity extends ActionBarActivity {
     private Sensor accelerometer;
     private ShakeListener shakeListener;
 
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
 
-        //ActionBar
-        android.support.v7.app.ActionBar actionBar = getSupportActionBar();
-        actionBar.setHomeAsUpIndicator(R.mipmap.ic_launcher);
-        actionBar.setDisplayHomeAsUpEnabled(true);
-        actionBar.setTitle(R.string.app_name_long);
-        actionBar.setBackgroundDrawable(new ColorDrawable(Color.parseColor("#024265")));
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
+                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        drawer.setDrawerListener(toggle);
+        toggle.syncState();
+
+        doFirstRun();
+
+        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        navigationView.setNavigationItemSelectedListener(this);
 
         //Preferences
         sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
@@ -89,27 +104,13 @@ public class MainActivity extends ActionBarActivity {
         });
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }
+    public void flashResult(ImageView imageView) {
 
-    public boolean onOptionsItemSelected(MenuItem item) {
-        Intent intent = new Intent();
-        switch (item.getItemId()) {
-            case R.id.action_settings:
-                intent.setClass(this, PreferencesActivity.class);
-                startActivityForResult(intent, 0);
-                return true;
-            case R.id.about:
-                intent.setClass(this, AboutActivity.class);
-                startActivityForResult(intent, 0);
-                return true;
-            default:
-                return super.onOptionsItemSelected(item);
-        }
-
+        Animation animation = new AlphaAnimation(0.0f, 1.0f);
+        animation.setDuration(500);
+        animation.setStartOffset(20);
+        animation.setRepeatMode(Animation.REVERSE);
+        imageView.startAnimation(animation);
 
     }
 
@@ -179,6 +180,7 @@ public class MainActivity extends ActionBarActivity {
             layoutParams.height = display.getWidth() / 6;
 
             imageViews[i].setLayoutParams(layoutParams);
+            flashResult(imageViews[i]);
             if (vibrationEnabled) {
                 vibrator.vibrate(50);
             }
@@ -207,4 +209,82 @@ public class MainActivity extends ActionBarActivity {
         sensorManager.unregisterListener(shakeListener);
         super.onPause();
     }
+
+    @Override
+    public void onBackPressed() {
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        if (drawer.isDrawerOpen(GravityCompat.START)) {
+            drawer.closeDrawer(GravityCompat.START);
+        } else {
+            super.onBackPressed();
+        }
+    }
+
+    @SuppressWarnings("StatementWithEmptyBody")
+    @Override
+    public boolean onNavigationItemSelected(MenuItem item) {
+        // Handle navigation view item clicks here.
+        Intent intent;
+
+        switch(item.getItemId()) {
+            case R.id.nav_about:
+                intent = new Intent(this, AboutActivity.class);
+                startActivityForResult(intent, 0);
+                return true;
+
+            case R.id.nav_help:
+                intent = new Intent(this, HelpActivity.class);
+                startActivityForResult(intent, 0);
+                return true;
+
+            case R.id.nav_settimgs:
+                intent = new Intent(this, SettingsActivity.class);
+                startActivityForResult(intent, 0);
+                return true;
+            default:
+        }
+
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        drawer.closeDrawer(GravityCompat.START);
+        return true;
+    }
+
+    private void doFirstRun() {
+        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+        sharedPreferences.edit().putString("firstShow", "").commit();
+        SharedPreferences settings = getSharedPreferences("firstShow", getBaseContext().MODE_PRIVATE);
+        if (settings.getBoolean("isFirstRun", true)) {
+            welcomeDialog();
+            SharedPreferences.Editor editor = settings.edit();
+            editor.putBoolean("isFirstRun", false);
+            editor.commit();
+        }
+    }
+
+    public void welcomeDialog() {
+        AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
+
+        alertDialog.setTitle(R.string.welcome_title);
+
+        alertDialog.setMessage(R.string.welcome_description);
+
+        alertDialog.setIcon(R.mipmap.drawer_icon_dicer);
+
+        alertDialog.setPositiveButton(getString(R.string.confirm_button), new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog,int which) {
+            }
+        });
+
+        final Intent intent = new Intent(this, HelpActivity.class);
+        alertDialog.setNegativeButton(getString(R.string.help_button), new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int which) {
+                startActivityForResult(intent, 0);
+                dialog.cancel();
+            }
+        });
+
+        alertDialog.show();
+    }
+
+
 }

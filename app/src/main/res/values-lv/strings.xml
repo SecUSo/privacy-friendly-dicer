@@ -1,17 +1,44 @@
 <resources>
-    <string name="app_name">Dicer</string>
-    <string name="app_name_long">Privacy Friendly Dicer</string>
+
+    <string name="app_name">Kauliņi</string>
+    <string name="app_name_long">Privacy Friendly Kauliņi</string>
+
     <string name="action_settings">Iestatījumi</string>
+    <string name="action_about">Informācija</string>
+    <string name="action_help">Palīdzība</string>
+
+    <!-- Navigation Drawer-->
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <!-- MainActivity-->
     <string name="roll_button">Mest kauliņus</string>
     <string name="choose_dice_heading">Kauliņu skaits: </string>
+
+    <!--Settings-->
     <string name="settings_title">Kauliņu iestatījumi</string>
     <string name="enable_shaking">Mest ar kratīšanu</string>
     <string name="vibration_title">Ieslēgt vibrāciju</string>
+
+    <!--About-->
     <string name="about">Informācija</string>
-    <string name="version_number">Versija 0.9</string>
-    <string name="about_author">Autors: Karola Marky</string>
+    <string name="version_number">Versija 1.3</string>
+    <string name="about_author">Autors: Karola Marky un līdzstrādnieki.</string>
     <string name="about_affiliation">Sadarbībā ar</string>
-    <string name="privacy_friendly">Šī aplikācija ir no Privacy Friendly Apps aplikāciju kataloga.</string>
+    <string name="privacy_friendly">Šī lietotne ir no Technische Universität Darmstadt izstrādātā Privacy Friendly Apps lietotņu kataloga. Bilžu autortiesības pieder TU Darmstadt un Google Inc.</string>
     <string name="more_info">Papildus informācija (angļu valodā):</string>
-    <string name="url"><a href="https://www.secuso.informatik.tu-darmstadt.de/en/research/results/privacy-friendly-apps">https://www.secuso.org</a></string>
+
+    <!-- Help-->
+    <string name="help_general">Vispārēji</string>
+    <string name="help_general_description">Privacy Friendly Kauliņus var izmantot lai mestu vienu līdz desmit seškantīgus metamos kauliņus. Izvēleties kauliņu skaitu ar slaideru. </string>
+    <string name="help_general_dicing">Nospiediet pogu lai mestu kauliņus. Kauliņus var arī mest kratot telefonu, ja attiecīgais iestatījums ir ieslēgts.</string>
+    <string name="help_privacy_heading">Informācija par privātsfēru</string>
+    <string name="help_permissions_heading">Atļaujas</string>
+    <string name="help_permissions_description">Privacy Friendly Kauliņi izmanto vibrāciju lai dotu atsauksmi par kauliņu mešanu.</string>
+
+    <!-- WelcomeDialog-->
+    <string name="welcome_title">Sveicināti!</string>
+    <string name="welcome_description">Izvēleties kauliņu skaitu ar slaidera palīdzību. Metiet kauliņus nospiežot pogu vai kratot telefonu.</string>
+    <string name="confirm_button">Labi</string>
+    <string name="help_button">Palīdzība</string>
 </resources>

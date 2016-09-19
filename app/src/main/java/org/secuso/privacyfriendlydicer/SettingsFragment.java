@@ -1,7 +1,7 @@
 package org.secuso.privacyfriendlydicer;
 
-import android.os.Bundle;
-import android.preference.PreferenceFragment;
+        import android.os.Bundle;
+        import android.preference.PreferenceFragment;
 
 /**
  * Created by yonjuni on 31.08.15.
