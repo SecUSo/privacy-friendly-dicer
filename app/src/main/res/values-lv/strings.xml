@@ -27,8 +27,6 @@
     <string name="about_affiliation">Sadarbībā ar</string>
     <string name="privacy_friendly">Šī lietotne ir no Technische Universität Darmstadt izstrādātā Privacy Friendly Apps lietotņu kataloga. Bilžu autortiesības pieder TU Darmstadt un Google Inc.</string>
     <string name="more_info">Papildus informācija (angļu valodā):</string>
-    <string name="github" translatable="false"><a href="https://github.com/SecUSo/privacy-friendly-dicer">Github-Repozitorija</a></string>
-    <string name="url" translatable="false"><a href="https://www.secuso.org/pfa">SECUSO-Mājas lapa</a></string>
 
     <!-- Help-->
     <string name="help_general">Vispārēji</string>
