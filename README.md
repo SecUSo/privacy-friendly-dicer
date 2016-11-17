@@ -11,12 +11,16 @@ Privacy Friendly Dicer belongs to the group of Privacy Friendly Apps and has bee
 
 ## Download and more Information
 
-Further development requires Android Studio, we recommend to use at least version 2.1.3
+[<img src="https://f-droid.org/badge/get-it-on.png" alt="Get it on F-Droid" height="60">](https://f-droid.org/repository/browse/?fdid=org.secuso.privacyfriendlydicer)<a href="https://play.google.com/store/apps/details?id=org.secuso.privacyfriendlydicer"><img src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png" height="60"></a>
+
+### Building
+
+Further development requires Android Studio, we recommend to use at least version 2.2.2
 
 ### API Reference
 
 Mininum SDK: 16
-Target SDK: 24 
+Target SDK: 25 
 
 ## License
 
@@ -28,7 +32,7 @@ This program is distributed in the hope that it will be useful, but WITHOUT ANY 
 
 You should have received a copy of the GNU General Public License along with this program. If not, see http://www.gnu.org/licenses/.
 
-The icons used in the nagivation drawer are licensed under the CC BY 2.5. In addition to them the app uses icons from Google Design Material Icons licensed under Apache License Version 2.0. All other images (the logo of Privacy Friendly Apps, the SECUSO logo and the header in the navigation drawer) copyright Technische Universtität Darmstadt (2016).
+The icons used in the nagivation drawer are licensed under the CC BY 2.5. In addition to them the app uses icons from Google Design Material Icons licensed under Apache License Version 2.0. All other images (the logo of Privacy Friendly Apps, the SECUSO logo and splash icon) copyright Technische Universtität Darmstadt (2016).
 
 
 ## Contributors
