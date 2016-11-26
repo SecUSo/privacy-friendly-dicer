@@ -19,7 +19,7 @@ public class Dicer {
             byte bytes[] = new byte[6];
             random.nextBytes(bytes);
             dice[i] = random.nextInt(6) +1;
-            Log.d("DICER", String.valueOf(dice[i]));
+            //Log.d("DICER", String.valueOf(dice[i]));
         }
         return dice;
     }
