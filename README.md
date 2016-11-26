@@ -1,13 +1,14 @@
 ## Privacy Friendly Dicer
-Privacy Friendly Dicer is a very simple dicing application and belongs to the group of Privacy Friendly Apps developed by Technische Universität Darmstadt, Germany. It can be used to roll up to 10 six-sided dice. This can be done either by pressing a button or by shaking the smartphone.
+Privacy Friendly Dicer is a very simple dicing application. It can be used to roll up to 10 six-sided dice. This can be done either by pressing a button or by shaking the smartphone.
 
 This app is optimized regarding the user's privacy. It doesn't use any tracking mechanisms, neither it displays any advertisement.
-It only uses two permissions: Vibration for providing feedback whether dice were rolled or not and sensor to enable
-the dicing by shaking.
+
+It only uses one permission: Vibration for providing feedback whether dice were rolled or not. But this can be switched on/off in the settings. If the permission is not granted in Android versions higher than 6 the device simply does not vibrate.  <br />
+Privacy Friendly Dicer uses SecureRandom [http://docs.oracle.com/javase/7/docs/api/java/security/SecureRandom.html] to get a number between 1 and 6 to determine the dicing result.
 
 ## Motivation
 
-Privacy Friendly Dicer belongs to the group of Privacy Friendly Apps and has been developed to provide a privacy friendly dicing application. 
+Privacy Friendly Dicer has been developed to provide a privacy friendly dicing application. It belongs to the Privacy Friendly Apps group which is developed by the SECUSO research group at Technische Universität Darmstadt, Germany. More information can be found on secuso.org/pfa
 
 ## Download and more Information
 
