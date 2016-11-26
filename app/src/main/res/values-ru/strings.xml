@@ -22,7 +22,7 @@
 
     <!--About-->
     <string name="about">Информация</string>
-    <string name="version_number">Версия 1.4</string>
+    <string name="version_number">Версия 1.4.1</string>
     <string name="about_author">Автор: Karola Marky и сотрудники.</string>
     <string name="about_affiliation">В сотрудничестве с</string>
     <string name="privacy_friendly">Это программа принадлежит к группе Privacy Friendly Apps, разработанных Technische Universität Darmstadt. Исходный код лицензирован под GPLv3. Право на использование изображений принадлежит TU Darmstadt и Google Inc.</string>
