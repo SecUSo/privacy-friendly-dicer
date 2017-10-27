@@ -1,0 +1,44 @@
+<resources>
+
+    <string name="app_name">Dicer</string>
+    <string name="app_name_long">Privacy Friendly Dicer</string>
+
+    <string name="action_settings">Paramètres</string>
+    <string name="action_about">À propos</string>
+    <string name="action_help">Aide</string>
+
+    <!-- Navigation Drawer-->
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <!-- MainActivity-->
+    <string name="roll_button">Lancer les dés</string>
+    <string name="choose_dice_heading">Nombre de dés : </string>
+
+    <!--Settings-->
+    <string name="settings_title">Paramètres de lancer</string>
+    <string name="enable_shaking">Lancer les dés en secouant</string>
+    <string name="vibration_title">Activer le retour de vibration</string>
+
+    <!--About-->
+    <string name="about">À propos</string>
+    <string name="version_number">Version 1.4.1</string>
+    <string name="about_author">Auteur : Karola Marky et contributeurs.</string>
+    <string name="about_affiliation">Affilié avec :</string>
+    <string name="privacy_friendly">Cette application appartient au groupe d\'applications Privacy Friendly développées par la Technische Universität Darmstadt. Le code source est sous licence GPLv3. Copyright des images : TU Darmstadt et Google Inc.</string>
+    <string name="more_info">Plus d\'informations sur :</string>
+
+    <!-- Help-->
+    <string name="help_general">Générale</string>
+    <string name="help_general_description">Privacy Friendly Dicer peut-être utilisé pour lancer entre un et dix dés à 6 faces. Choisissez le nombre de dés avec le curseur. </string>
+    <string name="help_general_dicing">Appuyez sur le bouton pour lancer les dés. Les dés peuvent également être lancés en secouant le smartphone si cela a été autorisé dans les paramètres.</string>
+    <string name="help_privacy_heading">Informations de vie privée</string>
+    <string name="help_permissions_heading">Permissions</string>
+    <string name="help_permissions_description">Privacy Friendly Dicer utilise la permission de vibration pour activer le retour après avoir affiché un nouveau résultat. Si la permission n'a pas été accordée l'appareil ne vibrera pas.</string>
+
+    <!-- WelcomeDialog-->
+    <string name="welcome_title">Bienvenue</string>
+    <string name="welcome_description">Choisissez le nombre de dés en ajustant le curseur. Lancez les dés en appuyant sur le bouton ou en secouant le smartphone.</string>
+    <string name="confirm_button">OK</string>
+    <string name="help_button">Afficher l'aide</string>
+</resources>
