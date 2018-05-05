@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity
         //Preferences
         sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
 
-        //Seekbar
+        //Seekbars
         final SeekBar poolSeekBar = (SeekBar) findViewById(R.id.seekBar);
 
         poolSeekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
@@ -78,12 +78,28 @@ public class MainActivity extends AppCompatActivity
             }
         });
 
+        final SeekBar facesSeekBar = (SeekBar) findViewById(R.id.seekBarFace);
+
+        facesSeekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                TextView textViewLengthDisplay =
+                        (TextView) findViewById(R.id.chooseFaceNumber);
+                textViewLengthDisplay.setText(Integer.toString(progress + 1));
+            }
+
+            public void onStartTrackingTouch(SeekBar seekBar) {
+            }
+
+            public void onStopTrackingTouch(SeekBar seekBar) {
+            }
+        });
+
         //Button
         Button rollDiceButton = (Button) findViewById(R.id.rollButton);
 
         rollDiceButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                evaluate((Vibrator) getSystemService(Context.VIBRATOR_SERVICE), poolSeekBar.getProgress() + 1);
+                evaluate((Vibrator) getSystemService(Context.VIBRATOR_SERVICE), poolSeekBar.getProgress() + 1, facesSeekBar.getProgress()+1);
 
             }
         });
@@ -98,7 +114,7 @@ public class MainActivity extends AppCompatActivity
             public void onShake(int count) {
 
                 if (shakingEnabled) {
-                    evaluate((Vibrator) getSystemService(Context.VIBRATOR_SERVICE), poolSeekBar.getProgress() + 1);
+                    evaluate((Vibrator) getSystemService(Context.VIBRATOR_SERVICE), poolSeekBar.getProgress() + 1, facesSeekBar.getProgress() + 1);
                 }
             }
         });
@@ -154,6 +170,24 @@ public class MainActivity extends AppCompatActivity
             case 6:
                 imageView.setImageResource(R.drawable.d6);
                 break;
+            case 7:
+                imageView.setImageResource(R.drawable.d7);
+                break;
+            case 8:
+                imageView.setImageResource(R.drawable.d8);
+                break;
+            case 9:
+                imageView.setImageResource(R.drawable.d9);
+                break;
+            case 10:
+                imageView.setImageResource(R.drawable.d10);
+                break;
+            case 11:
+                imageView.setImageResource(R.drawable.d11);
+                break;
+            case 12:
+                imageView.setImageResource(R.drawable.d12);
+                break;
             case 0:
                 imageView.setImageResource(0);
                 break;
@@ -163,12 +197,12 @@ public class MainActivity extends AppCompatActivity
 
     }
 
-    public void evaluate(Vibrator vibrator, int diceNumber) {
+    public void evaluate(Vibrator vibrator, int diceNumber, int faceNumber) {
 
         applySettings();
 
         Dicer dicer = new Dicer();
-        int[] dice = dicer.rollDice(diceNumber);
+        int[] dice = dicer.rollDice(diceNumber, faceNumber);
         initResultDiceViews();
 
         Display display = getWindowManager().getDefaultDisplay();
@@ -251,13 +285,13 @@ public class MainActivity extends AppCompatActivity
 
     private void doFirstRun() {
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
-        sharedPreferences.edit().putString("firstShow", "").commit();
+        sharedPreferences.edit().putString("firstShow", "").apply();
         SharedPreferences settings = getSharedPreferences("firstShow", getBaseContext().MODE_PRIVATE);
         if (settings.getBoolean("isFirstRun", true)) {
             welcomeDialog();
             SharedPreferences.Editor editor = settings.edit();
             editor.putBoolean("isFirstRun", false);
-            editor.commit();
+            editor.apply();
         }
     }
 
