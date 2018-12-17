@@ -11,6 +11,9 @@ android:
     - android-23
 
 before_install:
+  - yes | sdkmanager "build-tools;23.0.3"
+  - yes | sdkmanager "build-tools;25.0.3"
+  - yes | sdkmanager "build-tools;26.0.3"
   - yes | sdkmanager "build-tools;28.0.3"
 
 script:
