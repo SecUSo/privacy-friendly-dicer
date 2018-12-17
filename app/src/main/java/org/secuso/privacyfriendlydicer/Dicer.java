@@ -9,13 +9,14 @@ import java.security.SecureRandom;
  */
 public class Dicer {
 
+    private static final SecureRandom random = new SecureRandom();
+
     public int[] rollDice(int poolSize){
         int[] dice = new int[poolSize];
 
         for (int i=0;i<dice.length;i++){
             //dice[i] = (int) (Math.random() * 6) + 1;
 
-            SecureRandom random = new SecureRandom();
             byte bytes[] = new byte[6];
             random.nextBytes(bytes);
             dice[i] = random.nextInt(6) +1;
