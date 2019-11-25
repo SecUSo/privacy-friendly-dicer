@@ -1,0 +1,1 @@
+Die Privacy Friendly Würfel App ermöglicht es zwischen einem und zehn sechsseitigen Würfeln zu würfeln.
