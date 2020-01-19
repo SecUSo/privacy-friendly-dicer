@@ -104,15 +104,13 @@ public class MainActivity extends AppCompatActivity
         });
     }
 
-    public void flashResult(ImageView imageView) {
-
-        Animation animation = new AlphaAnimation(0.0f, 1.0f);
-        animation.setDuration(500);
-        animation.setStartOffset(20);
-        animation.setRepeatMode(Animation.REVERSE);
-        imageView.startAnimation(animation);
-
-    }
+    public static void flashResult(ImageView imageView) {
+		Animation animation = new AlphaAnimation(0.0f, 1.0f);
+		animation.setDuration(500);
+		animation.setStartOffset(20);
+		animation.setRepeatMode(Animation.REVERSE);
+		imageView.startAnimation(animation);
+	}
 
     public void initResultDiceViews() {
         imageViews = new ImageView[10];
