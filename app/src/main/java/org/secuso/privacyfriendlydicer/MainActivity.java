@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Point;
 import android.hardware.Sensor;
 import android.hardware.SensorManager;
 import android.os.Bundle;
@@ -26,19 +27,19 @@ import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+
+    private static Dicer dicer = new Dicer();
 
     private ImageView[] imageViews;
-    boolean shakingEnabled;
-    boolean vibrationEnabled;
-    SharedPreferences sharedPreferences;
+    private boolean shakingEnabled;
+    private boolean vibrationEnabled;
+    private SharedPreferences sharedPreferences;
 
     // for Shaking
     private SensorManager sensorManager;
     private Sensor accelerometer;
     private ShakeListener shakeListener;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -120,6 +121,7 @@ public class MainActivity extends AppCompatActivity
         });
 
         displaySum(new int[]{0});
+        initResultDiceViews();
     }
 
     public void flashResult(ImageView imageView) {
@@ -152,7 +154,6 @@ public class MainActivity extends AppCompatActivity
     }
 
     public void switchDice(ImageView imageView, int result) {
-
         switch (result) {
             case 1:
                 imageView.setImageResource(R.drawable.d1);
@@ -203,27 +204,22 @@ public class MainActivity extends AppCompatActivity
 
         applySettings();
 
-        Dicer dicer = new Dicer();
         int[] dice = dicer.rollDice(diceNumber, faceNumber);
+
         displaySum(dice);
         initResultDiceViews();
+        showDice(dice);
 
-        Display display = getWindowManager().getDefaultDisplay();
+        if (vibrationEnabled) {
+            vibrator.vibrate(50);
+        }
+    }
 
+    private void showDice(int[] dice) {
         for (int i = 0; i < dice.length; i++) {
             switchDice(imageViews[i], dice[i]);
-            android.view.ViewGroup.LayoutParams layoutParams = imageViews[i].getLayoutParams();
-            layoutParams.width = display.getWidth() / 6;
-            layoutParams.height = display.getWidth() / 6;
-
-            imageViews[i].setLayoutParams(layoutParams);
             flashResult(imageViews[i]);
-            if (vibrationEnabled) {
-                vibrator.vibrate(50);
-            }
-
         }
-
     }
 
     private void displaySum(int[] dice) {

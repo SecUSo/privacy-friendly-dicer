@@ -7,8 +7,8 @@ android {
         applicationId "org.secuso.privacyfriendlydicer"
         minSdkVersion 16
         targetSdkVersion 28
-        versionCode 6
-        versionName "1.4.1"
+        versionCode 7
+        versionName "1.5.0"
     }
 
     buildTypes {
@@ -28,4 +28,5 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     implementation 'com.android.support:appcompat-v7:28.0.0'
     implementation 'com.android.support:design:28.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
 }
