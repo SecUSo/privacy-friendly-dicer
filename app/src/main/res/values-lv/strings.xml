@@ -37,8 +37,13 @@
     <string name="help_permissions_description">Privacy Friendly Kauliņi izmanto vibrāciju lai dotu atsauksmi par kauliņu mešanu.</string>
 
     <!-- WelcomeDialog-->
-    <string name="welcome_title">Sveicināti!</string>
-    <string name="welcome_description">Izvēleties kauliņu skaitu ar slaidera palīdzību. Metiet kauliņus nospiežot pogu vai kratot telefonu.</string>
-    <string name="confirm_button">Labi</string>
     <string name="help_button">Palīdzība</string>
+    <string name="slide1_heading">Sveicināti!</string>
+    <string name="slide1_text">Izvēleties kauliņu skaitu ar slaidera palīdzību. Metiet kauliņus nospiežot pogu vai kratot telefonu.</string>
+    <string name="action_tutorial">Tutorial</string>
+    <string name="okay">Labi</string>
+    <string name="next">Labi</string>
+    <string name="skip">Skip</string>
+    <string name="main_dice_sum">Summa: %s</string>
+    <string name="choose_face_heading">lappušu skaits:</string>
 </resources>

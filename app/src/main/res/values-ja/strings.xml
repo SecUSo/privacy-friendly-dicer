@@ -37,8 +37,13 @@
     <string name="help_permissions_description">Privacy Friendly Dicer uses the vibration permission to enable feedback.</string>
 
     <!-- WelcomeDialog-->
-    <string name="welcome_title">ようこそ</string>
-    <string name="welcome_description">Choose the number of dice of adjusting the slider. Roll the dice by pressing the button or shaking the smartphone.</string>
-    <string name="confirm_button">了解</string>
     <string name="help_button">ヘルプ</string>
+    <string name="slide1_heading">ようこそ</string>
+    <string name="slide1_text">Choose the number of dice of adjusting the slider. Roll the dice by pressing the button or shaking the smartphone.</string>
+    <string name="action_tutorial">Tutorial</string>
+    <string name="okay">了解</string>
+    <string name="next">了解</string>
+    <string name="skip">Skip</string>
+    <string name="main_dice_sum">和: %s</string>
+    <string name="choose_face_heading">ページ数:</string>
 </resources>

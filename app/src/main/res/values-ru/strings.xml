@@ -37,8 +37,13 @@
     <string name="help_permissions_description">Privacy Friendly Кости использует разрешение для вибрации в целях обратной связи.</string>
 
     <!-- WelcomeDialog-->
-    <string name="welcome_title">Добро пожаловать</string>
-    <string name="welcome_description">Выберите количество костей с помощью слайдера. Бросайте кости нажатием кнопки или встряхиванием телефона. </string>
-    <string name="confirm_button">Подтвердить</string>
     <string name="help_button">Помощь</string>
+    <string name="choose_face_heading">Стороны костей:</string>
+    <string name="main_dice_sum">сумма: %s</string>
+    <string name="next">Продолжить</string>
+    <string name="okay">Подтвердить</string>
+    <string name="slide1_heading">Добро пожаловать</string>
+    <string name="slide1_text">"Выберите количество костей с помощью слайдера. Бросайте кости нажатием кнопки или встряхиванием телефона. "</string>
+    <string name="action_tutorial">Tutorial</string>
+    <string name="skip">Skip</string>
 </resources>

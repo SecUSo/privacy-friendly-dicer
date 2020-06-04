@@ -40,9 +40,12 @@
     <string name="help_permissions_heading">Permissions</string>
     <string name="help_permissions_description">Privacy Friendly Dicer uses the vibration permission to enable feedback after displaying a new result. If the permission is not granted the device will not vibrate.</string>
 
-    <!-- WelcomeDialog-->
-    <string name="welcome_title">Welcome</string>
-    <string name="welcome_description">Choose the number of dice of adjusting the slider. Roll the dice by pressing the button or shaking the smartphone.</string>
-    <string name="confirm_button">OKAY</string>
-    <string name="help_button">View help</string>
+    <string name="next">Next</string>
+    <string name="skip">Skip</string>
+    <string name="okay">Okay</string>
+
+    <string name="slide1_heading">Welcome!</string>
+    <string name="slide1_text">Choose the number of dice of adjusting the slider. Roll the dice by pressing the button or shaking the smartphone.</string>
+    <string name="action_tutorial">Tutorial</string>
+    <string name="help_button">Help</string>
 </resources>

@@ -8,4 +8,19 @@
     <color name="white">#ffffff</color>
 
     <color name="ic_launcher_background">#3680BB</color>
+
+    <color name="dot_dark_screen">#026499</color>
+    <color name="dot_light_screen">#448bb2</color>
+
+    <array name="array_dot_active">
+        <item>@color/dot_light_screen</item>
+        <item>@color/dot_light_screen</item>
+        <item>@color/dot_light_screen</item>
+    </array>
+
+    <array name="array_dot_inactive">
+        <item>@color/dot_dark_screen</item>
+        <item>@color/dot_dark_screen</item>
+        <item>@color/dot_dark_screen</item>
+    </array>
 </resources>

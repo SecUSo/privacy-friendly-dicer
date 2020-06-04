@@ -1,8 +1,9 @@
 package org.secuso.privacyfriendlydicer;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 
 /**
  * Created by yonjuni on 22.10.16.
@@ -14,10 +15,17 @@ public class SplashActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        Intent mainIntent = new Intent(SplashActivity.this, MainActivity.class);
-        SplashActivity.this.startActivity(mainIntent);
-        SplashActivity.this.finish();
+        SharedPreferences settings = getSharedPreferences("firstShow", getBaseContext().MODE_PRIVATE);
 
+        Intent intent;
+        if (settings.getBoolean("isFirstRun", true)) {
+            intent = new Intent(SplashActivity.this, TutorialActivity.class);
+        } else {
+            intent = new Intent(SplashActivity.this, MainActivity.class);
+        }
+
+        startActivity(intent);
+        finish();
     }
 
 }

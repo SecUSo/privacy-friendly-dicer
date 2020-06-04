@@ -39,8 +39,11 @@
     <string name="help_permissions_description">Privacy Friendly Würfel nutzt die Berechtigung "Vibration" muss Feedback zu ermöglichen. Diese Berechtigung kann der App ohne Probleme entzogen werden.</string>
 
     <!-- WelcomeDialog-->
-    <string name="welcome_title">Willkommen</string>
-    <string name="welcome_description">Die Anzahl der Würfel kann über den Slider gewählt werden. Zum Würfeln kann entweder der Button gedrückt oder das Gerät geschüttelt werden.</string>
-    <string name="confirm_button">OKAY</string>
     <string name="help_button">Zur Hilfe</string>
+    <string name="next">Weiter</string>
+    <string name="skip">Überspringen</string>
+    <string name="okay">Okay</string>
+    <string name="slide1_heading">Willkommen</string>
+    <string name="slide1_text">Die Anzahl der Würfel kann über den Slider gewählt werden. Zum Würfeln kann entweder der Button gedrückt oder das Gerät geschüttelt werden.</string>
+    <string name="action_tutorial">Tutorial</string>
 </resources>

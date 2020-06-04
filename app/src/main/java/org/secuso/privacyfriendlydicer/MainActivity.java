@@ -1,23 +1,20 @@
 package org.secuso.privacyfriendlydicer;
 
-import android.app.AlertDialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.graphics.Point;
 import android.hardware.Sensor;
 import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.os.Vibrator;
 import android.preference.PreferenceManager;
-import android.support.design.widget.NavigationView;
-import android.support.v4.view.GravityCompat;
-import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-import android.view.Display;
+import com.google.android.material.navigation.NavigationView;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+
 import android.view.MenuItem;
 import android.view.View;
 import android.view.animation.AlphaAnimation;
@@ -53,8 +50,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.setDrawerListener(toggle);
         toggle.syncState();
-
-        doFirstRun();
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
@@ -271,18 +266,24 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         switch(item.getItemId()) {
             case R.id.nav_about:
                 intent = new Intent(this, AboutActivity.class);
-                startActivityForResult(intent, 0);
+                startActivity(intent);
                 return true;
 
             case R.id.nav_help:
                 intent = new Intent(this, HelpActivity.class);
-                startActivityForResult(intent, 0);
+                startActivity(intent);
                 return true;
 
             case R.id.nav_settimgs:
                 intent = new Intent(this, SettingsActivity.class);
-                startActivityForResult(intent, 0);
+                startActivity(intent);
                 return true;
+
+            case R.id.nav_tutorial:
+                intent = new Intent(this, TutorialActivity.class);
+                startActivity(intent);
+                return true;
+
             default:
         }
 
@@ -290,43 +291,4 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
-
-    private void doFirstRun() {
-        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
-        sharedPreferences.edit().putString("firstShow", "").apply();
-        SharedPreferences settings = getSharedPreferences("firstShow", getBaseContext().MODE_PRIVATE);
-        if (settings.getBoolean("isFirstRun", true)) {
-            welcomeDialog();
-            SharedPreferences.Editor editor = settings.edit();
-            editor.putBoolean("isFirstRun", false);
-            editor.apply();
-        }
-    }
-
-    public void welcomeDialog() {
-        AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
-
-        alertDialog.setTitle(R.string.welcome_title);
-
-        alertDialog.setMessage(R.string.welcome_description);
-
-        alertDialog.setIcon(R.mipmap.drawer_icon_dicer);
-
-        alertDialog.setPositiveButton(getString(R.string.confirm_button), new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog,int which) {
-            }
-        });
-
-        final Intent intent = new Intent(this, HelpActivity.class);
-        alertDialog.setNegativeButton(getString(R.string.help_button), new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int which) {
-                startActivityForResult(intent, 0);
-                dialog.cancel();
-            }
-        });
-
-        alertDialog.show();
-    }
-
-
 }
