@@ -14,6 +14,7 @@
     <!-- MainActivity-->
     <string name="roll_button">Roll the Dice</string>
     <string name="choose_dice_heading">Number of dice: </string>
+    <string name="choose_face_heading">Number of face: </string>
 
     <!--Settings-->
     <string name="settings_title">Dicing Settings</string>

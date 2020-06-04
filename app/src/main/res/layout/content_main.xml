@@ -44,18 +44,49 @@
         android:progress="5"
         android:layout_marginTop="10dp" />
 
+    <TextView
+        android:id="@+id/chooseFacesHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="120dp"
+        android:text="@string/choose_face_heading"
+        android:textSize="18sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/chooseFaceNumber"
+        android:textSize="18sp"
+        android:text="6"
+        android:layout_toRightOf="@+id/chooseFacesHeading"
+        android:layout_marginTop="120dp"
+        android:layout_marginLeft="5dp"/>
+
+    <SeekBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/seekBarFace"
+        android:layout_below="@+id/chooseFacesHeading"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:max="11"
+        android:progress="5"
+        android:layout_marginTop="10dp" />
+
     <Button
         android:id="@+id/rollButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/seekBar"
-        android:text="@string/roll_button"
-        android:textSize="20sp"
-        android:textColor="@color/white"
-        android:background="@drawable/button_fullwidth"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="15dp"
-        />
+        android:layout_marginTop="195dp"
+        android:background="@drawable/button_fullwidth"
+        android:text="@string/roll_button"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
 
     <ImageView
         android:layout_width="wrap_content"
