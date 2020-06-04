@@ -118,6 +118,8 @@ public class MainActivity extends AppCompatActivity
                 }
             }
         });
+
+        displaySum(new int[]{0});
     }
 
     public void flashResult(ImageView imageView) {
@@ -203,6 +205,7 @@ public class MainActivity extends AppCompatActivity
 
         Dicer dicer = new Dicer();
         int[] dice = dicer.rollDice(diceNumber, faceNumber);
+        displaySum(dice);
         initResultDiceViews();
 
         Display display = getWindowManager().getDefaultDisplay();
@@ -221,6 +224,15 @@ public class MainActivity extends AppCompatActivity
 
         }
 
+    }
+
+    private void displaySum(int[] dice) {
+        int sum = 0;
+        for(int d : dice) {
+            sum += d;
+        }
+        TextView sumTextView = findViewById(R.id.sumTextView);
+        sumTextView.setText(getString(R.string.main_dice_sum, Integer.toString(sum)));
     }
 
     public void applySettings() {

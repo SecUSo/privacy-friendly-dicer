@@ -31,7 +31,9 @@
         android:text="6"
         android:layout_toRightOf="@+id/chooseDiceHeading"
         android:layout_marginTop="50dp"
-        android:layout_marginLeft="5dp"/>
+        android:layout_marginLeft="5dp"
+        android:layout_toEndOf="@+id/chooseDiceHeading"
+        android:layout_marginStart="5dp" />
 
     <SeekBar
         android:layout_width="match_parent"
@@ -87,6 +89,15 @@
         android:text="@string/roll_button"
         android:textColor="@color/white"
         android:textSize="20sp" />
+
+    <TextView
+        android:layout_below="@id/rollButton"
+        android:id="@+id/sumTextView"
+        android:text="@string/main_dice_sum"
+        android:layout_marginTop="8dp"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
 
     <ImageView
         android:layout_width="wrap_content"
@@ -174,4 +185,6 @@
         android:layout_marginTop="40dp"
         android:layout_marginLeft="6dp"
         android:id="@+id/resultTen"/>
+
+
 </RelativeLayout>
