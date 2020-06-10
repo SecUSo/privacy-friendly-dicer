@@ -8,7 +8,9 @@ import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.os.Vibrator;
 import android.preference.PreferenceManager;
+
 import com.google.android.material.navigation.NavigationView;
+
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -95,7 +97,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         rollDiceButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                evaluate((Vibrator) getSystemService(Context.VIBRATOR_SERVICE), poolSeekBar.getProgress() + 1, facesSeekBar.getProgress()+1);
+                evaluate((Vibrator) getSystemService(Context.VIBRATOR_SERVICE), poolSeekBar.getProgress() + 1, facesSeekBar.getProgress() + 1);
 
             }
         });
@@ -186,6 +188,30 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             case 12:
                 imageView.setImageResource(R.drawable.d12);
                 break;
+            case 13:
+                imageView.setImageResource(R.drawable.d13);
+                break;
+            case 14:
+                imageView.setImageResource(R.drawable.d14);
+                break;
+            case 15:
+                imageView.setImageResource(R.drawable.d15);
+                break;
+            case 16:
+                imageView.setImageResource(R.drawable.d16);
+                break;
+            case 17:
+                imageView.setImageResource(R.drawable.d17);
+                break;
+            case 18:
+                imageView.setImageResource(R.drawable.d18);
+                break;
+            case 19:
+                imageView.setImageResource(R.drawable.d19);
+                break;
+            case 20:
+                imageView.setImageResource(R.drawable.d20);
+                break;
             case 0:
                 imageView.setImageResource(0);
                 break;
@@ -219,7 +245,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     private void displaySum(int[] dice) {
         int sum = 0;
-        for(int d : dice) {
+        for (int d : dice) {
             sum += d;
         }
         TextView sumTextView = findViewById(R.id.sumTextView);
@@ -263,7 +289,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         // Handle navigation view item clicks here.
         Intent intent;
 
-        switch(item.getItemId()) {
+        switch (item.getItemId()) {
             case R.id.nav_about:
                 intent = new Intent(this, AboutActivity.class);
                 startActivity(intent);
