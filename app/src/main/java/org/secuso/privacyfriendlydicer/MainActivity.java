@@ -11,6 +11,7 @@ import android.preference.PreferenceManager;
 
 import com.google.android.material.navigation.NavigationView;
 
+import androidx.appcompat.widget.DrawableUtils;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -151,74 +152,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     }
 
     public void switchDice(ImageView imageView, int result) {
-        switch (result) {
-            case 1:
-                imageView.setImageResource(R.drawable.d1);
-                break;
-            case 2:
-                imageView.setImageResource(R.drawable.d2);
-                break;
-            case 3:
-                imageView.setImageResource(R.drawable.d3);
-                break;
-            case 4:
-                imageView.setImageResource(R.drawable.d4);
-                break;
-            case 5:
-                imageView.setImageResource(R.drawable.d5);
-                break;
-            case 6:
-                imageView.setImageResource(R.drawable.d6);
-                break;
-            case 7:
-                imageView.setImageResource(R.drawable.d7);
-                break;
-            case 8:
-                imageView.setImageResource(R.drawable.d8);
-                break;
-            case 9:
-                imageView.setImageResource(R.drawable.d9);
-                break;
-            case 10:
-                imageView.setImageResource(R.drawable.d10);
-                break;
-            case 11:
-                imageView.setImageResource(R.drawable.d11);
-                break;
-            case 12:
-                imageView.setImageResource(R.drawable.d12);
-                break;
-            case 13:
-                imageView.setImageResource(R.drawable.d13);
-                break;
-            case 14:
-                imageView.setImageResource(R.drawable.d14);
-                break;
-            case 15:
-                imageView.setImageResource(R.drawable.d15);
-                break;
-            case 16:
-                imageView.setImageResource(R.drawable.d16);
-                break;
-            case 17:
-                imageView.setImageResource(R.drawable.d17);
-                break;
-            case 18:
-                imageView.setImageResource(R.drawable.d18);
-                break;
-            case 19:
-                imageView.setImageResource(R.drawable.d19);
-                break;
-            case 20:
-                imageView.setImageResource(R.drawable.d20);
-                break;
-            case 0:
-                imageView.setImageResource(0);
-                break;
-            default:
-                break;
-        }
 
+        imageView.setImageResource(this.getResources().getIdentifier("d"+result, "drawable", this.getPackageName()));
     }
 
     public void evaluate(Vibrator vibrator, int diceNumber, int faceNumber) {
