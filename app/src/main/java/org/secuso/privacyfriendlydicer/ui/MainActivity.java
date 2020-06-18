@@ -147,7 +147,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         });
     }
 
-    public void flashResult(ImageView imageView) {
+    public static void flashResult(ImageView imageView) {
         Animation animation = new AlphaAnimation(0.0f, 1.0f);
         animation.setDuration(500);
         animation.setStartOffset(20);
