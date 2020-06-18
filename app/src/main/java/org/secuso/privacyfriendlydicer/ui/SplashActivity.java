@@ -1,4 +1,4 @@
-package org.secuso.privacyfriendlydicer;
+package org.secuso.privacyfriendlydicer.ui;
 
 import android.content.Intent;
 import android.content.SharedPreferences;

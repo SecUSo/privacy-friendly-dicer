@@ -1,4 +1,4 @@
-package org.secuso.privacyfriendlydicer;
+package org.secuso.privacyfriendlydicer.sensors;
 
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;

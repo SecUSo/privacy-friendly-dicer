@@ -1,9 +1,12 @@
-package org.secuso.privacyfriendlydicer;
+package org.secuso.privacyfriendlydicer.ui;
 
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import android.text.method.LinkMovementMethod;
 import android.widget.TextView;
+
+import org.secuso.privacyfriendlydicer.BuildConfig;
+import org.secuso.privacyfriendlydicer.R;
 
 /**
  * Created by yonjuni on 15.06.16.
