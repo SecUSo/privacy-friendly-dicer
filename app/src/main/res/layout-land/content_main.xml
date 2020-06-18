@@ -83,7 +83,7 @@
         android:layout_marginTop="10dp"
         android:layout_marginBottom="16dp"
         android:layout_marginEnd="16dp"
-        android:max="11"
+        android:max="19"
         android:progress="5"
         app:layout_constraintEnd_toStartOf="@id/center"
         app:layout_constraintStart_toStartOf="parent"
