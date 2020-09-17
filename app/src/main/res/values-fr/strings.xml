@@ -11,7 +11,9 @@
 
     <!-- MainActivity-->
     <string name="roll_button">Jeter le dé</string>
-    <string name="choose_dice_heading">Nombre de dés:</string>
+    <string name="choose_dice_heading">Nombre de dés: </string>
+    <string name="choose_face_heading">Number of faces: </string>
+    <string name="main_dice_sum">Sum: %s</string>
 
     <!--Settings-->
     <string name="settings_title">Paramètres</string>
@@ -23,7 +25,7 @@
     <string name="version_number">Version v%s</string>
     <string name="about_author">Auteur : Karola Marky et les contributeurs.</string>
     <string name="about_affiliation">En affiliation avec</string>
-    <string name="privacy_friendly">Cette application appartient au groupe d\'applications respectant votre vie privée développées (Privacy Friendly Apps) par la Technische Universität Darmstadt. Le code source est sous licence GPLv3. Copyright des images : TU Darmstadt et Google Inc.</string>
+    <string name="privacy_friendly">Cette application appartient au groupe d\'applications respectant votre vie privée développées (Privacy Friendly Apps) par la Karlsruhe Institute of Technology (KIT). Le code source est sous licence GPLv3. Copyright des images : KIT et Google Inc.</string>
     <string name="more_info">Plus d\'informations sur:</string>
 
     <!-- Help-->

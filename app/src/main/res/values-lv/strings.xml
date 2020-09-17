@@ -25,7 +25,7 @@
     <string name="version_number">Versija v%s</string>
     <string name="about_author">Autors: Karola Marky un līdzstrādnieki.</string>
     <string name="about_affiliation">Sadarbībā ar</string>
-    <string name="privacy_friendly">Šī lietotne ir no Technische Universität Darmstadt izstrādātā Privacy Friendly Apps lietotņu kataloga. Bilžu autortiesības pieder TU Darmstadt un Google Inc.</string>
+    <string name="privacy_friendly">Šī lietotne ir no Karlsruhe Institute of Technology (KIT) izstrādātā Privacy Friendly Apps lietotņu kataloga. Bilžu autortiesības pieder KIT un Google Inc.</string>
     <string name="more_info">Papildus informācija (angļu valodā):</string>
 
     <!-- Help-->
