@@ -1,0 +1,1 @@
+Ermöglicht, 1-10 sechsseitige Würfel zu würfeln.
