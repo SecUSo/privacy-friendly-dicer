@@ -1,0 +1,44 @@
+<resources>
+
+    <string name="app_name">Dado</string>
+    <string name="app_name_long">Dado amico della privacy</string>
+
+    <string name="action_settings">Impostazioni</string>
+    <string name="action_about">Informazioni</string>
+    <string name="action_help">Aiuto</string>
+
+    <!-- Navigation Drawer-->
+    <string name="navigation_drawer_open">Apri barra di navigazione</string>
+    <string name="navigation_drawer_close">Chiudi barra di navigazione</string>
+
+    <!-- MainActivity-->
+    <string name="roll_button">Tira il dado</string>
+    <string name="choose_dice_heading">Numero di dadi:</string>
+
+    <!--Settings-->
+    <string name="settings_title">Impostazioni dado</string>
+    <string name="enable_shaking">Tira i dadi agitando il dispositivo</string>
+    <string name="vibration_title">Attiva feedback vibrante</string>
+
+    <!--About-->
+    <string name="about">Informazioni</string>
+    <string name="version_number">Versione 1.4.1</string>
+    <string name="about_author">Autore: Karola Marky e contributori</string>
+    <string name="about_affiliation">Affiliato a</string>
+    <string name="privacy_friendly">Questa applicazione proviene dal gruppo di app amiche della privacy sviluppate da Technische Universität Darmstadt. Il codice sorgente è pubblicato sotto licenza GPLv3. Le immagini sono protette da copyright di TU Darmstadt e Google Inc.</string>
+    <string name="more_info">Maggiori informazioni possono essere trovate qui:</string>
+
+    <!-- Help-->
+    <string name="help_general">Generale</string>
+    <string name="help_general_description">Il dado amico della privacy può essere usato per lanciare tra uno e dieci dadi a sei facce</string>
+    <string name="help_general_dicing">Il dado amico della privacy può essere usato per lanciare tra uno e dieci dadi a sei facce. Scegli il numero di dadi con lo slider.</string>
+    <string name="help_privacy_heading">Informazioni sulla privacy</string>
+    <string name="help_permissions_heading">Permessi</string>
+    <string name="help_permissions_description">Il dado amico della privacy usa il permesso della vibrazione per attivare un feedback dopo aver mostrato un nuovo risultato. Se il permesso non è garantito il dispositivo non vibra.</string>
+
+    <!-- WelcomeDialog-->
+    <string name="welcome_title">Benvenuto</string>
+    <string name="welcome_description">Scegli il numero di dadi con lo slider. Tira il dado premendoci sopra o agitando il dispositivo.</string>
+    <string name="confirm_button">Ok</string>
+    <string name="help_button">Guarda l\'aiuto</string>
+</resources>
