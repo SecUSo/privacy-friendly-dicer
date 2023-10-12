@@ -1,14 +1,14 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 29
+    compileSdk 33
 
     defaultConfig {
         applicationId "org.secuso.privacyfriendlydicer"
         minSdkVersion 16
-        targetSdkVersion 29
-        versionCode 9
-        versionName "1.7.0"
+        targetSdkVersion 33
+        versionCode 10
+        versionName "1.7.1"
     }
 
     buildTypes {
