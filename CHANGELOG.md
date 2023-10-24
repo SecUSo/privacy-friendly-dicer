@@ -1,7 +1,25 @@
 # Changelog
 
+<a name="v1.7.1"></a>
+## [Privacy Friendly Dicer (v1.7.1)](https://github.com/SecUSo/privacy-friendly-dicer/releases/tag/v1.7.1) - 24 Oct 2023
+
+## What's Changed
+* Refactor Member Ignoring Method smell in MainActivity class by [@emaiannone](https://github.com/emaiannone) in https://github.com/SecUSo/privacy-friendly-dicer/pull/17
+* Updated fr (French) translation v2 by [@djalexkidd](https://github.com/djalexkidd) in https://github.com/SecUSo/privacy-friendly-dicer/pull/13
+* V1.7.1 by [@coderPaddyS](https://github.com/coderPaddyS) in https://github.com/SecUSo/privacy-friendly-dicer/pull/22
+
+## New Contributors
+* [@emaiannone](https://github.com/emaiannone) made their first contribution in https://github.com/SecUSo/privacy-friendly-dicer/pull/17
+* [@djalexkidd](https://github.com/djalexkidd) made their first contribution in https://github.com/SecUSo/privacy-friendly-dicer/pull/13
+* [@coderPaddyS](https://github.com/coderPaddyS) made their first contribution in https://github.com/SecUSo/privacy-friendly-dicer/pull/22
+
+**Full Changelog**: https://github.com/SecUSo/privacy-friendly-dicer/compare/v1.6.0...v1.7.1
+
+[Changes][v1.7.1]
+
+
 <a name="v1.6.0"></a>
-## [Dicer (Privacy Friendly) v1.6.0 (v1.6.0)](https://github.com/SecUSo/privacy-friendly-dicer/releases/tag/v1.6.0) - 18 Jun 2020
+## [Dicer (Privacy Friendly) v1.6.0](https://github.com/SecUSo/privacy-friendly-dicer/releases/tag/v1.6.0) - 18 Jun 2020
 
 - Increased maximum number of dice faces to 20
 - Added drawing of numbers greater than six
@@ -11,7 +29,7 @@
 
 
 <a name="v1.5.0"></a>
-## [Dicer (Privacy Friendly) v1.5.0 (v1.5.0)](https://github.com/SecUSo/privacy-friendly-dicer/releases/tag/v1.5.0) - 04 Jun 2020
+## [Dicer (Privacy Friendly) v1.5.0](https://github.com/SecUSo/privacy-friendly-dicer/releases/tag/v1.5.0) - 04 Jun 2020
 
 - Added adaptive icon
 - Added sum of dice rolls
@@ -27,7 +45,7 @@
 
 
 <a name="v1.4.1"></a>
-## [Privacy Friendly Dicer v1.4.1 (v1.4.1)](https://github.com/SecUSo/privacy-friendly-dicer/releases/tag/v1.4.1) - 27 Nov 2016
+## [Privacy Friendly Dicer v1.4.1](https://github.com/SecUSo/privacy-friendly-dicer/releases/tag/v1.4.1) - 27 Nov 2016
 
 Introduction of SecureRandom for dicing.
 
@@ -36,7 +54,7 @@ Introduction of SecureRandom for dicing.
 
 
 <a name="v1.4"></a>
-## [Privacy Friendly Dicer v1.4 (v1.4)](https://github.com/SecUSo/privacy-friendly-dicer/releases/tag/v1.4) - 17 Nov 2016
+## [Privacy Friendly Dicer v1.4](https://github.com/SecUSo/privacy-friendly-dicer/releases/tag/v1.4) - 17 Nov 2016
 
 Improvement of design
 
@@ -45,7 +63,7 @@ Improvement of design
 
 
 <a name="v1.3"></a>
-## [Privacy Friendly Dicer v1.3 (v1.3)](https://github.com/SecUSo/privacy-friendly-dicer/releases/tag/v1.3) - 22 Sep 2016
+## [Privacy Friendly Dicer v1.3](https://github.com/SecUSo/privacy-friendly-dicer/releases/tag/v1.3) - 22 Sep 2016
 
 Design Update to the new design of Privacy Friendly Apps. 
 
@@ -54,7 +72,7 @@ Design Update to the new design of Privacy Friendly Apps.
 
 
 <a name="1.0"></a>
-## [Privacy Friendly Dicer v1.0 (1.0)](https://github.com/SecUSo/privacy-friendly-dicer/releases/tag/1.0) - 03 Jan 2016
+## [Privacy Friendly Dicer v1.0](https://github.com/SecUSo/privacy-friendly-dicer/releases/tag/1.0) - 03 Jan 2016
 
 Privacy Friendly Dicer is a simple dicing application. It can be used to roll up to ten six-sided dice. Dicing can be done by pressing a button or shaking the smartphone. It belongs to the group of Privacy Friendly Apps from the research group SecUSo (Security, Usability and Society) by the Technische Universität Darmstadt, Germany.
 
@@ -63,7 +81,7 @@ Privacy Friendly Dicer is a simple dicing application. It can be used to roll up
 
 
 <a name="0.9"></a>
-## [Privacy Friendly Dicer v0.9 (0.9)](https://github.com/SecUSo/privacy-friendly-dicer/releases/tag/0.9) - 16 Oct 2015
+## [Privacy Friendly Dicer v0.9](https://github.com/SecUSo/privacy-friendly-dicer/releases/tag/0.9) - 16 Oct 2015
 
 Privacy Friendly Dicer is a simple dicing application. It can be used to roll up to ten six-sided dice. Dicing can be done by pressing a button or shaking the smartphone. It belongs to the group of Privacy Friendly Apps from the research group SecUSo (Security, Usability and Society) by the Technische Universität Darmstadt, Germany.
 
@@ -71,6 +89,7 @@ Privacy Friendly Dicer is a simple dicing application. It can be used to roll up
 [Changes][0.9]
 
 
+[v1.7.1]: https://github.com/SecUSo/privacy-friendly-dicer/compare/v1.6.0...v1.7.1
 [v1.6.0]: https://github.com/SecUSo/privacy-friendly-dicer/compare/v1.5.0...v1.6.0
 [v1.5.0]: https://github.com/SecUSo/privacy-friendly-dicer/compare/v1.4.1...v1.5.0
 [v1.4.1]: https://github.com/SecUSo/privacy-friendly-dicer/compare/v1.4...v1.4.1
@@ -79,4 +98,4 @@ Privacy Friendly Dicer is a simple dicing application. It can be used to roll up
 [1.0]: https://github.com/SecUSo/privacy-friendly-dicer/compare/0.9...1.0
 [0.9]: https://github.com/SecUSo/privacy-friendly-dicer/tree/0.9
 
- <!-- Generated by https://github.com/rhysd/changelog-from-release -->
+<!-- Generated by https://github.com/rhysd/changelog-from-release v3.7.1 -->
