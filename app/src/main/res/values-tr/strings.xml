@@ -1,0 +1,52 @@
+<resources>
+
+    <string name="app_name">Dicer</string>
+    <string name="app_name_long">Gizlilik Dostu Dicer</string>
+
+    <string name="action_settings">Ayarlar</string>
+    <string name="action_about">Hakkında</string>
+    <string name="action_help">Yardım</string>
+
+    <!-- Navigation Drawer-->
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <!-- MainActivity-->
+    <string name="roll_button">Zarı salla</string>
+    <string name="choose_dice_heading">Zar sayısı: </string>
+    <string name="choose_face_heading">Yüz sayısı: </string>
+    <string name="main_dice_sum">Toplam: %s</string>
+
+    <!--Settings-->
+    <string name="settings_title">Zar atma ayarları</string>
+    <string name="enable_shaking">zarı sallayarak at</string>
+    <string name="vibration_title">Titreşim Geri Bildirimini Etkinleştir</string>
+
+    <!--About-->
+    <string name="about">Hakkında</string>
+    <string name="version_number">Sürüm v%s</string>
+    <string name="about_author">Kurucu: Karola Marky ve katkı yapanlar.</string>
+    <string name="about_affiliation">ile bağlantılı olarak</string>
+    <string name="privacy_friendly">Bu uygulama Karlsruher Institute for Technology (KIT) tarafından geliştirilen Gizlilik Dostu Uygulamalar grubuna aittir. Kaynak kodu GPLv3 altında lisanslanmıştır. Görsellerin telif hakkı KIT ve Google Inc.</string>
+    <string name="more_info">Daha fazla bilgiyi şurada bulabilirsiniz:</string>
+    <string name="github" translatable="false"><a href="https://github.com/SecUSo/privacy-friendly-dicer">Github-Repo</a></string>
+    <string name="url" translatable="false"><a href="https://www.secuso.org/pfa">SECUSO-Website</a></string>
+
+    <!-- Help-->
+    <string name="help_general">Genel</string>
+    <string name="help_general_description">Gizlilik Dostu Dicer bir ile on arasında altı yüzlü zar atmak için kullanılabilir. Kaydırıcı ile zar sayısını seçin. </string>
+    <string name="help_general_dicing">Zarı atmak için düğmeye basın. Zar, ayarlarda bunu etkinleştirdiyseniz akıllı telefonu sallayarak da atılabilir.</string>
+    <string name="help_privacy_heading">Gizlilik Bilgisi </string>
+    <string name="help_permissions_heading">İzinler</string>
+    <string name="help_permissions_description">Gizlilik Dostu Dicer, yeni bir sonuç görüntüledikten sonra geri bildirimi etkinleştirmek için titreşim iznini kullanır. İzin verilmezse cihaz titreşmeyecektir.</string>
+
+    <string name="next">Sonraki</string>
+    <string name="skip">Geç</string>
+    <string name="okay">Tamam</string>
+
+    <string name="slide1_heading">Hoşgeldin!</string>
+    <string name="slide1_text">Kaydırıcıyı ayarlayarak zar sayısını seçin. Düğmeye basarak veya akıllı telefonu sallayarak zarı yuvarlayın.</string>
+    <string name="action_tutorial">ÖĞRETİCİ</string>
+    <string name="help_button">Yardım</string>
+</resources>
+      
