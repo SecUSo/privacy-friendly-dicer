@@ -1,49 +1,51 @@
 <resources>
 
-    <string name="app_name">サイコロ</string>
-    <string name="app_name_long">Privacy Friendly サイコロ</string>
+    <string name="app_name">Dicer</string>
+    <string name="app_name_long">Privacy Friendly Dicer</string>
 
     <string name="action_settings">設定</string>
     <string name="action_about">アプリについて</string>
     <string name="action_help">ヘルプ</string>
 
     <!-- Navigation Drawer-->
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="navigation_drawer_open">ナビゲーションドロワーを開く</string>
+    <string name="navigation_drawer_close">ナビゲーションドロワーを閉じる</string>
 
     <!-- MainActivity-->
-    <string name="roll_button">サイコロを転がす</string>
-    <string name="choose_dice_heading">サイコロの数： </string>
+    <string name="roll_button">サイコロを振る</string>
+    <string name="choose_dice_heading">サイコロの個数: </string>
+    <string name="choose_face_heading">サイコロの面数: </string>
+    <string name="main_dice_sum">合計: %s</string>
 
     <!--Settings-->
     <string name="settings_title">サイコロの設定</string>
-    <string name="enable_shaking">シェーキングでさいころを転がす</string>
-    <string name="vibration_title">ヴァイブレーション</string>
+    <string name="enable_shaking">端末を振ってサイコロを振る</string>
+    <string name="vibration_title">バイブレーション</string>
 
     <!--About-->
     <string name="about">アプリについて</string>
     <string name="version_number">バージョン v%s</string>
-    <string name="about_author">プログラマー: Karola Marky</string>
-    <string name="about_affiliation">提携</string>
-    <string name="privacy_friendly">This application belongs to the group of Privacy Friendly Apps developed by Karlsruher Institute for Technology (KIT). Sourcecode licensed under GPLv3. Images copyright KIT and Google Inc.</string>
-    <string name="more_info">さらに詳しい情報は以下でご覧ください:</string>
+    <string name="about_author">作者: Karola Marky と貢献者たち</string>
+    <string name="about_affiliation">所属</string>
+    <string name="privacy_friendly">このアプリはドイツのカールスルーエ工科大学 (KIT - Karlsruher Institute for Technology) が開発するプライバシーを重視するアプリのグループの Privacy Friendly Apps に属します。ソースコードは GPLv3 の下で提供されます。画像の著作権は KIT と Google Inc が保持します。</string>
+    <string name="more_info">詳細は以下をご覧ください:</string>
+    <string name="github" translatable="false"><a href="https://github.com/SecUSo/privacy-friendly-dicer">Github-Repo</a></string>
+    <string name="url" translatable="false"><a href="https://www.secuso.org/pfa">SECUSO-Website</a></string>
 
     <!-- Help-->
-    <string name="help_general">概括</string>
-    <string name="help_general_description">Privacy Friendly Dicer can be used to roll between one and ten six-sided dice. Choose the number of dice with the slider. </string>
-    <string name="help_general_dicing">Press the button to roll the dice. The dice can also be rolled by shaking the smartphone if have enabled this in the settings.</string>
-    <string name="help_privacy_heading">情報保護について</string>
-    <string name="help_permissions_heading">アクセス許可</string>
-    <string name="help_permissions_description">Privacy Friendly Dicer uses the vibration permission to enable feedback.</string>
+    <string name="help_general">概要</string>
+    <string name="help_general_description">Privacy Friendly Dicer は、最大 10 個の 6 面サイコロを振れるアプリです。サイコロの個数はスライダーで選択できます。</string>
+    <string name="help_general_dicing">ボタンを押すとサイコロを振れます。設定でオフにしていなければ、端末を振ってサイコロを振ることもできます。</string>
+    <string name="help_privacy_heading">プライバシー情報</string>
+    <string name="help_permissions_heading">権限</string>
+    <string name="help_permissions_description">Privacy Friendly Dicer はバイブレーション権限を使用して、結果の更新を知らせます。権限が付与されていない場合は振動しません。</string>
 
-    <!-- WelcomeDialog-->
-    <string name="help_button">ヘルプ</string>
-    <string name="slide1_heading">ようこそ</string>
-    <string name="slide1_text">Choose the number of dice of adjusting the slider. Roll the dice by pressing the button or shaking the smartphone.</string>
-    <string name="action_tutorial">Tutorial</string>
+    <string name="next">次へ</string>
+    <string name="skip">スキップ</string>
     <string name="okay">了解</string>
-    <string name="next">了解</string>
-    <string name="skip">Skip</string>
-    <string name="main_dice_sum">和: %s</string>
-    <string name="choose_face_heading">ページ数:</string>
+
+    <string name="slide1_heading">ようこそ！</string>
+    <string name="slide1_text">スライダーでサイコロの個数を選択してください。ボタンを押すか端末を振ってサイコロを振ります。</string>
+    <string name="action_tutorial">チュートリアル</string>
+    <string name="help_button">ヘルプ</string>
 </resources>
