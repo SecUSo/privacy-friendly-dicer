@@ -26,7 +26,7 @@
     <string name="about">アプリについて</string>
     <string name="version_number">バージョン v%s</string>
     <string name="about_author">作者: Karola Marky と貢献者たち</string>
-    <string name="about_affiliation">所属</string>
+    <string name="about_affiliation">グループ</string>
     <string name="privacy_friendly">このアプリはドイツのカールスルーエ工科大学 (KIT - Karlsruher Institute for Technology) が開発するプライバシーを重視するアプリのグループの Privacy Friendly Apps に属します。ソースコードは GPLv3 の下で提供されます。画像の著作権は KIT と Google Inc が保持します。</string>
     <string name="more_info">詳細は以下をご覧ください:</string>
     <string name="github" translatable="false"><a href="https://github.com/SecUSo/privacy-friendly-dicer">Github-Repo</a></string>
