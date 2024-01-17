@@ -34,6 +34,10 @@ Further development requires Android Studio, we recommend to use at least versio
 Mininum SDK: 16
 Target SDK: 33 
 
+## Data Backup
+
+You can use the [Privacy Friendly Backup app](https://github.com/SecUSo/privacy-friendly-backup) to backup and restore this application's data. This can also be used to migrate your data to a new phone.
+
 ## License
 
 Privacy Friendly Dicer is licensed under the GPLv3. Copyright (C) 2015 Karola Marky
