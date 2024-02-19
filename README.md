@@ -23,7 +23,7 @@ Privacy Friendly Dicer uses SecureRandom [http://docs.oracle.com/javase/7/docs/a
 
 ## Motivation
 
-Privacy Friendly Dicer has been developed to provide a privacy friendly dicing application. It belongs to the Privacy Friendly Apps group which is developed by the SECUSO research group at Technische Universität Darmstadt, Germany. More information can be found on secuso.org/pfa
+Privacy Friendly Dicer has been developed to provide a privacy friendly dicing application. It belongs to the Privacy Friendly Apps group which is developed by the SECUSO research group at Karlsruhe Institute of Technology, Germany. More information can be found on secuso.org/pfa
 
 ## Building
 
@@ -44,7 +44,7 @@ This program is distributed in the hope that it will be useful, but WITHOUT ANY 
 
 You should have received a copy of the GNU General Public License along with this program. If not, see http://www.gnu.org/licenses/.
 
-The icons used in the nagivation drawer are licensed under the CC BY 2.5. In addition to them the app uses icons from Google Design Material Icons licensed under Apache License Version 2.0. All other images (the logo of Privacy Friendly Apps, the SECUSO logo, the app logo and splash icon) copyright Technische Universtität Darmstadt (2016).
+The icons used in the nagivation drawer are licensed under the CC BY 2.5. In addition to them the app uses icons from Google Design Material Icons licensed under Apache License Version 2.0. All other images (the logo of Privacy Friendly Apps, the SECUSO logo, the app logo and splash icon) copyright [SECUSO](www.secuso.org) (2019).
 
 
 ## Contributors
