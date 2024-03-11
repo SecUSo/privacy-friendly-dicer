@@ -1,7 +1,4 @@
-The Privacy Friendly Dicer application can be used to roll between one and ten six-sided dice. It belongs to the Privacy Friendly Apps group developed by the research group SECUSO at Karlsruhe Institute of Technology. More information can be found an secuso.org/pfa
 
-The number of dice can be chosen by a slider. Rolling the dice can be done by pressing a button or shaking the smart phone. By a short vibration the app signalizes that it rolled the dice and displays the results.
-It is possible to switch vibration and dicing by shaking on and off in the settings.
 
 What makes Privacy Friendly Dicer different from other similar dicing applications?
 
@@ -11,3 +8,9 @@ Most of dicing apps in the Google Play Store require additional permissions, the
 
 2. No advertisement:
 Many other apps in the Google Play Store display advertisement and therefore might violate the user’s privacy, shorten battery life or usage mobile data.
+
+
+Feel free to contact us via:
+Twitter - @SECUSOResearch https://twitter.com/secusoresearch
+Mastodon - @SECUSO_Research@bawü.social https://xn--baw-joa.social/@SECUSO_Research/
+Job opening - https://secuso.aifb.kit.edu/english/Job_Offers_1557.php
