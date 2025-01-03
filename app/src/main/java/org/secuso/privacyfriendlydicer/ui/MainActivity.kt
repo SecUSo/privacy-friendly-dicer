@@ -1,274 +1,177 @@
-package org.secuso.privacyfriendlydicer.ui;
+package org.secuso.privacyfriendlydicer.ui
 
-import android.content.Context;
-import android.content.Intent;
-import android.content.SharedPreferences;
-import android.graphics.Bitmap;
-import android.graphics.Canvas;
-import android.graphics.Color;
-import android.graphics.Paint;
-import android.graphics.Typeface;
-import android.hardware.Sensor;
-import android.hardware.SensorManager;
-import android.os.Bundle;
-import android.os.Vibrator;
-import android.preference.PreferenceManager;
-import android.view.MenuItem;
-import android.view.View;
-import android.view.animation.AlphaAnimation;
-import android.view.animation.Animation;
-import android.widget.ImageView;
-import android.widget.SeekBar;
+import android.content.Intent
+import android.content.SharedPreferences
+import android.graphics.Bitmap
+import android.graphics.Canvas
+import android.graphics.Color
+import android.graphics.Paint
+import android.graphics.Typeface
+import android.hardware.Sensor
+import android.hardware.SensorManager
+import android.os.Bundle
+import android.os.Vibrator
+import android.preference.PreferenceManager
+import android.view.MenuItem
+import android.view.View
+import android.view.animation.AlphaAnimation
+import android.view.animation.Animation
+import android.widget.ImageView
+import android.widget.SeekBar
+import android.widget.SeekBar.OnSeekBarChangeListener
+import androidx.annotation.DrawableRes
+import androidx.appcompat.app.ActionBarDrawerToggle
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
+import androidx.core.view.GravityCompat
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.GridLayoutManager
+import com.google.android.material.navigation.NavigationView
+import org.secuso.privacyfriendlydicer.R
+import org.secuso.privacyfriendlydicer.databinding.ActivityMainBinding
+import org.secuso.privacyfriendlydicer.databinding.ContentMainBinding
+import org.secuso.privacyfriendlydicer.sensors.ShakeListener
+import org.secuso.privacyfriendlydicer.sensors.ShakeListener.OnShakeListener
+import java.util.Locale
 
-import androidx.annotation.DrawableRes;
-import androidx.appcompat.app.ActionBarDrawerToggle;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.ContextCompat;
-import androidx.core.view.GravityCompat;
-import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProvider;
+class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
+    private val dicerViewModel by lazy { ViewModelProvider(this).get<DicerViewModel>(DicerViewModel::class.java) }
 
-import com.google.android.material.navigation.NavigationView;
+    private val binding by lazy { ActivityMainBinding.inflate(layoutInflater) }
+    private val contentMainBinding by lazy { ContentMainBinding.bind(binding.root) }
 
-import org.secuso.privacyfriendlydicer.R;
-import org.secuso.privacyfriendlydicer.databinding.ActivityMainBinding;
-import org.secuso.privacyfriendlydicer.databinding.ContentMainBinding;
-import org.secuso.privacyfriendlydicer.sensors.ShakeListener;
-
-import java.util.Locale;
-
-public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
-
-    private DicerViewModel dicerViewModel;
-
-    private ActivityMainBinding binding;
-    private ContentMainBinding contentMainBinding;
-
-    private ImageView[] imageViews;
-    private boolean shakingEnabled;
-    private boolean vibrationEnabled;
-    private SharedPreferences sharedPreferences;
+    private val adapter: DiceAdapter by lazy { DiceAdapter(dicerViewModel.dicerLiveData.value ?: IntArray(0), layoutInflater) }
+    private var shakingEnabled = false
+    private var vibrationEnabled = false
+    private val sharedPreferences by lazy { PreferenceManager.getDefaultSharedPreferences(this) }
 
     // for Shaking
-    private SensorManager sensorManager;
-    private Sensor accelerometer;
-    private ShakeListener shakeListener;
+    private val sensorManager: SensorManager by lazy { getSystemService(SENSOR_SERVICE) as SensorManager }
+    private val accelerometer: Sensor? by lazy { sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER) }
+    private val shakeListener = ShakeListener()
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        binding = ActivityMainBinding.inflate(getLayoutInflater());
-        contentMainBinding = ContentMainBinding.bind(binding.getRoot());
-        setContentView(binding.getRoot());
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(binding.root)
+        
+        contentMainBinding.dices.adapter = adapter
+        contentMainBinding.dices.layoutManager = object : GridLayoutManager(this, 5, VERTICAL, false) {
+            override fun canScrollHorizontally() = false
+            override fun canScrollVertically() = false
+        }
 
-        dicerViewModel = new ViewModelProvider(this).get(DicerViewModel.class);
+        initResources()
 
-        sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
-
-        initResources();
-
-        dicerViewModel.getDicerLiveData().observe(this, new Observer<int[]>() {
-            @Override
-            public void onChanged(int[] dice) {
-                displaySum(dice);
-                showDice(dice);
+        dicerViewModel.dicerLiveData.observe(this, object : Observer<IntArray> {
+            override fun onChanged(dice: IntArray) {
+                adapter.dices = dice
+                displaySum()
 
                 if (vibrationEnabled) {
-                    Vibrator vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
-                    vibrator.vibrate(50);
+                    val vibrator = getSystemService(VIBRATOR_SERVICE) as Vibrator
+                    vibrator.vibrate(50)
                 }
             }
-        });
+        })
 
-        dicerViewModel.getDiceNumberLiveData().observe(this, new Observer<Integer>() {
-            @Override
-            public void onChanged(Integer number) {
-                contentMainBinding.chooseDiceNumber.setText(String.format(Locale.ENGLISH, "%d", number));
+        dicerViewModel.diceNumberLiveData.observe(this, object : Observer<Int> {
+            override fun onChanged(number: Int) {
+                contentMainBinding.chooseDiceNumber.text = String.format(Locale.ENGLISH, "%d", number)
             }
-        });
+        })
 
-        dicerViewModel.getFaceNumberLiveData().observe(this, new Observer<Integer>() {
-            @Override
-            public void onChanged(Integer number) {
-                contentMainBinding.chooseFaceNumber.setText(String.format(Locale.ENGLISH, "%d", number));
+        dicerViewModel.faceNumberLiveData.observe(this, object : Observer<Int> {
+            override fun onChanged(number: Int) {
+                contentMainBinding.chooseFaceNumber.text = String.format(Locale.ENGLISH, "%d", number)
             }
-        });
+        })
     }
 
-    private void initResources() {
-        initResultDiceViews();
+    private fun initResources() {
+        setSupportActionBar(binding.toolbar)
 
-        setSupportActionBar(binding.toolbar);
+        val toggle = ActionBarDrawerToggle(this, binding.drawerLayout, binding.toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close)
+        binding.drawerLayout.addDrawerListener(toggle)
+        toggle.syncState()
 
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, binding.drawerLayout, binding.toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        binding.drawerLayout.setDrawerListener(toggle);
-        toggle.syncState();
+        binding.navView.setNavigationItemSelectedListener(this)
 
-        binding.navView.setNavigationItemSelectedListener(this);
+        contentMainBinding.seekBar.setOnSeekBarChangeListener(object : OnSeekBarChangeListener {
+            override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
+                dicerViewModel.setDiceNumber(progress + 1)
+            }
 
-        contentMainBinding.seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                dicerViewModel.setDiceNumber(progress + 1);
+            override fun onStartTrackingTouch(seekBar: SeekBar?) {
             }
-            public void onStartTrackingTouch(SeekBar seekBar) {
-            }
-            public void onStopTrackingTouch(SeekBar seekBar) {
-            }
-        });
 
-        contentMainBinding.seekBarFace.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                dicerViewModel.setFaceNumber(progress + 1);
+            override fun onStopTrackingTouch(seekBar: SeekBar?) {
             }
-            public void onStartTrackingTouch(SeekBar seekBar) {
+        })
+
+        contentMainBinding.seekBarFace.setOnSeekBarChangeListener(object : OnSeekBarChangeListener {
+            override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
+                dicerViewModel.setFaceNumber(progress + 1)
             }
-            public void onStopTrackingTouch(SeekBar seekBar) {
+
+            override fun onStartTrackingTouch(seekBar: SeekBar?) {
             }
-        });
+
+            override fun onStopTrackingTouch(seekBar: SeekBar?) {
+            }
+        })
 
         //Button
-        contentMainBinding.rollButton.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                rollDice();
+        contentMainBinding.rollButton.setOnClickListener(object : View.OnClickListener {
+            override fun onClick(v: View?) {
+                rollDice()
             }
-        });
+        })
 
         //Shaking
-        sensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
-        accelerometer = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
-        shakeListener = new ShakeListener();
-        shakeListener.setOnShakeListener(new ShakeListener.OnShakeListener() {
-
-            public void onShake(int count) {
+        shakeListener.setOnShakeListener(object : OnShakeListener {
+            override fun onShake(count: Int) {
                 if (shakingEnabled) {
-                    rollDice();
+                    rollDice()
                 }
             }
-        });
+        })
     }
 
-    public static void flashResult(ImageView imageView) {
-        Animation animation = new AlphaAnimation(0.0f, 1.0f);
-        animation.setDuration(500);
-        animation.setStartOffset(20);
-        animation.setRepeatMode(Animation.REVERSE);
-        imageView.startAnimation(animation);
+    fun rollDice() {
+        applySettings()
+        dicerViewModel.rollDice()
     }
 
-    public void initResultDiceViews() {
-        imageViews = new ImageView[10];
-
-        imageViews[0] = contentMainBinding.resultOne;
-        imageViews[1] = contentMainBinding.resultTwo;
-        imageViews[2] = contentMainBinding.resultThree;
-        imageViews[3] = contentMainBinding.resultFour;
-        imageViews[4] = contentMainBinding.resultFive;
-        imageViews[5] = contentMainBinding.resultSix;
-        imageViews[6] = contentMainBinding.resultSeven;
-        imageViews[7] = contentMainBinding.resultEight;
-        imageViews[8] = contentMainBinding.resultNine;
-        imageViews[9] = contentMainBinding.resultTen;
-
-        clearDiceViews();
+    private fun displaySum() {
+        contentMainBinding.sumTextView.text = getString(R.string.main_dice_sum, adapter.dices.sum().toString())
     }
 
-    private void clearDiceViews() {
-        for(ImageView imageView : imageViews) {
-            imageView.setImageResource(0);
-        }
+    fun applySettings() {
+        shakingEnabled = sharedPreferences.getBoolean("enable_shaking", true)
+        vibrationEnabled = sharedPreferences.getBoolean("enable_vibration", true)
     }
 
-    public void rollDice() {
-        applySettings();
-        dicerViewModel.rollDice();
+    public override fun onResume() {
+        super.onResume()
+        sensorManager.registerListener(
+            shakeListener, accelerometer,
+            SensorManager.SENSOR_DELAY_UI
+        )
+
+        applySettings()
     }
 
-    private void showDice(int[] dice) {
-        clearDiceViews();
-        for (int i = 0; i < dice.length; i++) {
-            if(dicerViewModel.getFaceNumber() <= 6) {
-                imageViews[i].setImageResource(getDicerDrawable(dice[i]));
-            } else {
-                imageViews[i].setImageBitmap(createBitmapForNumber(dice[i]));
-            }
-            flashResult(imageViews[i]);
-        }
+    public override fun onPause() {
+        sensorManager.unregisterListener(shakeListener)
+        super.onPause()
     }
 
-    public @DrawableRes int getDicerDrawable(int number) {
-        switch (number) {
-            case 1:
-                return R.drawable.d1;
-            case 2:
-                return R.drawable.d2;
-            case 3:
-                return R.drawable.d3;
-            case 4:
-                return R.drawable.d4;
-            case 5:
-                return R.drawable.d5;
-            case 6:
-                return R.drawable.d6;
-            default:
-                break;
-        }
-        return -1;
-    }
-
-    private Bitmap createBitmapForNumber(int number) {
-        int height = 256;
-        int width = 256;
-
-        Bitmap result = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888);
-        Canvas canvas = new Canvas(result);
-        canvas.drawColor(ContextCompat.getColor(this, R.color.colorAccent));
-
-        Paint p = new Paint();
-        float textSize = width * 2.5f / 4.0f;
-        p.setColor(Color.WHITE);
-        p.setTypeface(Typeface.DEFAULT_BOLD);
-        p.setTextAlign(Paint.Align.CENTER);
-        p.setTextSize(textSize);
-        p.setAntiAlias(true);
-
-        canvas.drawText(String.format(Locale.ENGLISH, "%d", number), width / 2.0f, height / 2.0f + textSize / 3.0f, p);
-        return result;
-    }
-
-    private void displaySum(int[] dice) {
-        int sum = 0;
-        for(int d : dice) {
-            sum += d;
-        }
-        contentMainBinding.sumTextView.setText(getString(R.string.main_dice_sum, Integer.toString(sum)));
-    }
-
-    public void applySettings() {
-        shakingEnabled = sharedPreferences.getBoolean("enable_shaking", true);
-        vibrationEnabled = sharedPreferences.getBoolean("enable_vibration", true);
-    }
-
-    @Override
-    public void onResume() {
-        super.onResume();
-        sensorManager.registerListener(shakeListener, accelerometer,
-                SensorManager.SENSOR_DELAY_UI);
-
-        applySettings();
-    }
-
-    @Override
-    public void onPause() {
-        sensorManager.unregisterListener(shakeListener);
-        super.onPause();
-    }
-
-    @Override
-    public void onBackPressed() {
+    override fun onBackPressed() {
         if (binding.drawerLayout.isDrawerOpen(GravityCompat.START)) {
-            binding.drawerLayout.closeDrawer(GravityCompat.START);
+            binding.drawerLayout.closeDrawer(GravityCompat.START)
         } else {
-            super.onBackPressed();
+            super.onBackPressed()
         }
     }
 
@@ -276,29 +179,18 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     /**
      * Handle navigation view item clicks here.
      */
-    @Override
-    public boolean onNavigationItemSelected(MenuItem item) {
-        Intent intent;
+    override fun onNavigationItemSelected(item: MenuItem): Boolean {
 
-        switch(item.getItemId()) {
-            case R.id.nav_about:
-                intent = new Intent(this, AboutActivity.class);
-                break;
-            case R.id.nav_help:
-                intent = new Intent(this, HelpActivity.class);
-                break;
-            case R.id.nav_settimgs:
-                intent = new Intent(this, SettingsActivity.class);
-                break;
-            case R.id.nav_tutorial:
-                intent = new Intent(this, TutorialActivity.class);
-                break;
-            default:
-                return false;
+        val intent = when (item.itemId) {
+            R.id.nav_about -> Intent(this, AboutActivity::class.java)
+            R.id.nav_help -> Intent(this, HelpActivity::class.java)
+            R.id.nav_settimgs -> Intent(this, SettingsActivity::class.java)
+            R.id.nav_tutorial -> Intent(this, TutorialActivity::class.java)
+            else -> return false
         }
 
-        startActivity(intent);
-        binding.drawerLayout.closeDrawer(GravityCompat.START);
-        return true;
+        startActivity(intent)
+        binding.drawerLayout.closeDrawer(GravityCompat.START)
+        return true
     }
 }

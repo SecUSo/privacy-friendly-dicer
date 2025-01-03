@@ -119,152 +119,18 @@
         app:layout_constraintStart_toEndOf="@id/center"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/resultOne"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/dices"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_below="@+id/rollButton"
-        android:layout_marginLeft="4dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginRight="4dp"
-        app:layout_constraintDimensionRatio="1:1"
-        app:layout_constraintEnd_toStartOf="@+id/resultTwo"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintTop_toBottomOf="@id/sumTextView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@id/center"
-        app:layout_constraintTop_toBottomOf="@id/sumTextView"
-        app:srcCompat="@drawable/d1" />
-
-    <ImageView
-        android:id="@+id/resultTwo"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_below="@+id/rollButton"
-        android:layout_marginLeft="4dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginRight="4dp"
-        app:layout_constraintDimensionRatio="1:1"
-        app:layout_constraintEnd_toStartOf="@+id/resultThree"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/resultOne"
-        app:layout_constraintTop_toBottomOf="@id/sumTextView"
-        app:srcCompat="@drawable/d1" />
-
-    <ImageView
-        android:id="@+id/resultThree"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_below="@+id/rollButton"
-        android:layout_marginLeft="4dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginRight="4dp"
-        app:layout_constraintDimensionRatio="1:1"
-        app:layout_constraintEnd_toStartOf="@+id/resultFour"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/resultTwo"
-        app:layout_constraintTop_toBottomOf="@id/sumTextView"
-        app:srcCompat="@drawable/d1" />
-
-    <ImageView
-        android:id="@+id/resultFour"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_below="@+id/rollButton"
-        android:layout_marginLeft="4dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginRight="4dp"
-        app:layout_constraintDimensionRatio="1:1"
-        app:layout_constraintEnd_toStartOf="@+id/resultFive"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/resultThree"
-        app:layout_constraintTop_toBottomOf="@id/sumTextView"
-        app:srcCompat="@drawable/d1" />
-
-    <ImageView
-        android:id="@+id/resultFive"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_below="@+id/rollButton"
-        android:layout_marginLeft="4dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginRight="4dp"
-        android:scaleType="fitXY"
-        android:visibility="visible"
-        app:layout_constraintDimensionRatio="1:1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/resultFour"
-        app:layout_constraintTop_toBottomOf="@id/sumTextView"
-        app:srcCompat="@drawable/d1" />
-
-    <ImageView
-        android:id="@+id/resultSix"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginLeft="4dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginRight="4dp"
-        app:layout_constraintDimensionRatio="1:1"
-        app:layout_constraintEnd_toStartOf="@+id/resultSeven"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@id/center"
-        app:layout_constraintTop_toBottomOf="@id/resultOne"
-        app:srcCompat="@drawable/d1" />
-
-    <ImageView
-        android:id="@+id/resultSeven"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginLeft="4dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginRight="4dp"
-        app:layout_constraintDimensionRatio="1:1"
-        app:layout_constraintEnd_toStartOf="@+id/resultEight"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/resultSix"
-        app:layout_constraintTop_toBottomOf="@id/resultOne"
-        app:srcCompat="@drawable/d1" />
-
-    <ImageView
-        android:id="@+id/resultEight"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginLeft="4dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginRight="4dp"
-        app:layout_constraintDimensionRatio="1:1"
-        app:layout_constraintEnd_toStartOf="@+id/resultNine"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/resultSeven"
-        app:layout_constraintTop_toBottomOf="@id/resultOne"
-        app:srcCompat="@drawable/d1" />
-
-    <ImageView
-        android:id="@+id/resultNine"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginLeft="4dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginRight="4dp"
-        app:layout_constraintDimensionRatio="1:1"
-        app:layout_constraintEnd_toStartOf="@+id/resultTen"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/resultEight"
-        app:layout_constraintTop_toBottomOf="@id/resultOne"
-        app:srcCompat="@drawable/d1" />
-
-    <ImageView
-        android:id="@+id/resultTen"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginLeft="4dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginRight="4dp"
-        app:layout_constraintDimensionRatio="1:1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/resultNine"
-        app:layout_constraintTop_toBottomOf="@id/resultOne"
-        app:srcCompat="@drawable/d1" />
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:spanCount="5"
+        tools:listitem="@layout/dice"
+        tools:itemCount="20"/>
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/center"
