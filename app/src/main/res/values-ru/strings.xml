@@ -1,49 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="app_name">Кости</string>
     <string name="app_name_long">Privacy Friendly Кости</string>
-
-    <string name="action_settings">Установка</string>
-    <string name="action_about">Информация</string>
+    <string name="action_settings">Настройки</string>
+    <string name="action_about">О приложении</string>
     <string name="action_help">Помощь</string>
-
     <!-- Navigation Drawer-->
     <string name="navigation_drawer_open">Открыть навигацию</string>
     <string name="navigation_drawer_close">Закрыть навигацию</string>
-
     <!-- MainActivity-->
     <string name="roll_button">Бросать кости</string>
     <string name="choose_dice_heading">Количество костей: </string>
-
     <!--Settings-->
     <string name="settings_title">Установки для кости</string>
     <string name="enable_shaking">Бросать с помощью встряхивания телефона</string>
     <string name="vibration_title">Включить вибрацию</string>
-
     <!--About-->
     <string name="about">Информация</string>
     <string name="version_number">Версия v%s</string>
     <string name="about_author">Автор: Karola Marky и сотрудники.</string>
-    <string name="about_affiliation">В сотрудничестве с</string>
+    <string name="about_affiliation">Вместе с</string>
     <string name="privacy_friendly">Это программа принадлежит к группе Privacy Friendly Apps, разработанных Karlsruhe Institute of Technology (KIT). Исходный код лицензирован под GPLv3. Право на использование изображений принадлежит KIT и Google Inc.</string>
-    <string name="more_info">Дополнительная информация (на английском языке):</string>
-
+    <string name="more_info">Подробнее можно узнать на:</string>
     <!-- Help-->
     <string name="help_general">Обзор</string>
     <string name="help_general_description">Privacy Friendly Кости может быть использован для того, чтобы бросить от трех до шести костей. Выберите количество костей с помощью слайдера. </string>
     <string name="help_general_dicing">Нажмите на кнопку, чтобы бросить кость. Кость также можно бросить с помощью встряхивания телефона, если эта опция включена в установках. </string>
-    <string name="help_privacy_heading">Информация по использованию персональных данных</string>
+    <string name="help_privacy_heading">О конфиденциальности</string>
     <string name="help_permissions_heading">Разрешения</string>
     <string name="help_permissions_description">Privacy Friendly Кости использует разрешение для вибрации в целях обратной связи.</string>
-
     <!-- WelcomeDialog-->
     <string name="help_button">Помощь</string>
     <string name="choose_face_heading">Стороны костей:</string>
     <string name="main_dice_sum">сумма: %s</string>
-    <string name="next">Продолжить</string>
-    <string name="okay">Подтвердить</string>
+    <string name="next">Дальше</string>
+    <string name="okay">Хорошо</string>
     <string name="slide1_heading">Добро пожаловать</string>
     <string name="slide1_text">"Выберите количество костей с помощью слайдера. Бросайте кости нажатием кнопки или встряхиванием телефона. "</string>
     <string name="action_tutorial">Tutorial</string>
-    <string name="skip">Skip</string>
+    <string name="skip">Пропуск</string>
 </resources>
