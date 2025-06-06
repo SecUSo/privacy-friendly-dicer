@@ -13,7 +13,7 @@
      style="float: right; margin-right: 10px;" />
 # Privacy Friendly Dicer
 
-[<img src="https://f-droid.org/badge/get-it-on.png" alt="Get it on F-Droid" height="60">](https://f-droid.org/repository/browse/?fdid=org.secuso.privacyfriendlydicer)<a href="https://play.google.com/store/apps/details?id=org.secuso.privacyfriendlydicer"><img src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png" height="60"></a>
+[<img src="https://f-droid.org/badge/get-it-on.png" alt="Get it on F-Droid" height="60">](https://f-droid.org/repository/browse/?fdid=org.secuso.privacyfriendlydicer)
 
 Privacy Friendly Dicer is a very simple dicing application. It can be used to roll up to 10 six-sided dice. This can be done either by pressing a button or by shaking the smartphone.
 
