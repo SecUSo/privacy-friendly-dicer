@@ -1,4 +1,4 @@
-package org.secuso.privacyfriendlyboardgameclock
+package org.secuso.privacyfriendlydicer
 
 import android.content.Context
 import android.graphics.text.LineBreaker
@@ -9,6 +9,7 @@ import android.view.LayoutInflater
 import android.widget.CheckBox
 import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
+import androidx.core.content.edit
 
 fun checkGoodbyeGoogle(context: Context, layoutInflater: LayoutInflater) {
 
@@ -18,7 +19,12 @@ fun checkGoodbyeGoogle(context: Context, layoutInflater: LayoutInflater) {
         val view = layoutInflater.inflate(R.layout.dialog_goodbye_google, null, false)
         view.findViewById<CheckBox>(R.id.show_notice_checkbox).apply {
             setOnClickListener {
-                PreferenceManager.getDefaultSharedPreferences(context).edit().putBoolean("show_goodbye_google_notice", !isChecked).apply()
+                PreferenceManager.getDefaultSharedPreferences(context).edit {
+                    putBoolean(
+                        "show_goodbye_google_notice",
+                        !isChecked
+                    )
+                }
             }
         }
         val dialog = AlertDialog.Builder(context)

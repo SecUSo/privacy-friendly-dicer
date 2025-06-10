@@ -1,12 +1,6 @@
 package org.secuso.privacyfriendlydicer.ui
 
 import android.content.Intent
-import android.content.SharedPreferences
-import android.graphics.Bitmap
-import android.graphics.Canvas
-import android.graphics.Color
-import android.graphics.Paint
-import android.graphics.Typeface
 import android.hardware.Sensor
 import android.hardware.SensorManager
 import android.os.Bundle
@@ -14,20 +8,16 @@ import android.os.Vibrator
 import android.preference.PreferenceManager
 import android.view.MenuItem
 import android.view.View
-import android.view.animation.AlphaAnimation
-import android.view.animation.Animation
-import android.widget.ImageView
 import android.widget.SeekBar
 import android.widget.SeekBar.OnSeekBarChangeListener
-import androidx.annotation.DrawableRes
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContextCompat
 import androidx.core.view.GravityCompat
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
 import com.google.android.material.navigation.NavigationView
+import org.secuso.privacyfriendlydicer.checkGoodbyeGoogle
 import org.secuso.privacyfriendlydicer.R
 import org.secuso.privacyfriendlydicer.databinding.ActivityMainBinding
 import org.secuso.privacyfriendlydicer.databinding.ContentMainBinding
@@ -86,6 +76,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 contentMainBinding.chooseFaceNumber.text = String.format(Locale.ENGLISH, "%d", number)
             }
         })
+        checkGoodbyeGoogle(this, layoutInflater)
     }
 
     private fun initResources() {
