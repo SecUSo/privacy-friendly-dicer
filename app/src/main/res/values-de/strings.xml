@@ -1,27 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="app_name">Würfel</string>
     <string name="app_name_long">Privacy Friendly Würfel</string>
-
     <string name="action_settings">Einstellungen</string>
     <string name="action_about">Über</string>
     <string name="action_help">Hilfe</string>
-
     <!-- Navigation Drawer-->
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
-
+    <string name="navigation_drawer_open">Navigationsmenü öffnen</string>
+    <string name="navigation_drawer_close">Navigationsmenü schließen</string>
     <!-- MainActivity-->
     <string name="roll_button">Würfeln</string>
     <string name="choose_dice_heading">Anzahl der Würfel: </string>
     <string name="choose_face_heading">Anzahl der Seiten: </string>
     <string name="main_dice_sum">Summe: %s</string>
-
     <!--Settings-->
     <string name="settings_title">Würfeleinstellungen</string>
     <string name="enable_shaking">Durch Schütteln würfeln</string>
     <string name="vibration_title">Vibrieren</string>
-
     <!--About-->
     <string name="about">Über</string>
     <string name="version_number">Version v%s</string>
@@ -29,7 +24,6 @@
     <string name="about_affiliation">In Zusammenarbeit mit</string>
     <string name="privacy_friendly">Diese App gehört zur Gruppe der Privacy Friendly Apps entwickelt vom Karlsruher Institut für Technologie (KIT). Der Quellcode ist unter der GPLv3-Lizenz lizenziert. Bilder sind urheberrechtlich geschützt (KIT und Goolge Inc.)</string>
     <string name="more_info">Weitere Infos unter:</string>
-
     <!-- Help-->
     <string name="help_general">Allgemein</string>
     <string name="help_general_description">Privacy Friendly Würfel kann zwischen einem und zehn sechsseitigen Würfeln würfeln. Die Anzahl kann über den Slider bestimmt werden. </string>
@@ -37,13 +31,12 @@
     <string name="help_privacy_heading">Datenschutzinfo</string>
     <string name="help_permissions_heading">Berechtigungen</string>
     <string name="help_permissions_description">Privacy Friendly Würfel nutzt die Berechtigung "Vibration" muss Feedback zu ermöglichen. Diese Berechtigung kann der App ohne Probleme entzogen werden.</string>
-
     <!-- WelcomeDialog-->
     <string name="help_button">Zur Hilfe</string>
     <string name="next">Weiter</string>
     <string name="skip">Überspringen</string>
     <string name="okay">Okay</string>
-    <string name="slide1_heading">Willkommen</string>
+    <string name="slide1_heading">Willkommen!</string>
     <string name="slide1_text">Die Anzahl der Würfel kann über den Slider gewählt werden. Zum Würfeln kann entweder der Button gedrückt oder das Gerät geschüttelt werden.</string>
     <string name="action_tutorial">Tutorial</string>
 </resources>
