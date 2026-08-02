@@ -21,7 +21,7 @@
     <string name="about">Über</string>
     <string name="version_number">Version v%s</string>
     <string name="about_affiliation">In Zusammenarbeit mit</string>
-    <string name="privacy_friendly">Diese App gehört zur Gruppe der Privacy Friendly Apps entwickelt vom Karlsruher Institut für Technologie (KIT). Der Quellcode ist unter der GPLv3-Lizenz lizenziert. Bilder sind urheberrechtlich geschützt (KIT und Goolge Inc.)</string>
+    <string name="privacy_friendly">Diese App gehört zur Gruppe der Privacy Friendly Apps entwickelt vom Karlsruher Institut für Technologie (KIT). Der Quellcode ist unter der GPLv3-Lizenz lizenziert. Bilder sind urheberrechtlich geschützt (KIT und Google Inc.).</string>
     <string name="more_info">Weitere Infos unter:</string>
     <!-- Help-->
     <string name="help_general">Allgemein</string>
@@ -64,7 +64,7 @@
     <string name="dialog_new_dice_mode_rounds">Rundenanzahl</string>
     <string name="dialog_new_dice_mode_face">Höchste Zahl</string>
     <string name="dialog_new_dice_mode_add">Würfel erstellen</string>
-    <string name="dice_mode_rounds_label">Runde</string>
+    <string name="dice_mode_rounds_label">Runde:</string>
     <string name="dice_mode_dice_mode_label">Würfelmodus:</string>
     <string name="dice_mode_dice_label">Würfel:</string>
     <string name="manage_dice_mode_delete_dialog_delete_label">Löschen</string>
