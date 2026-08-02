@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="action_settings">Paramètres globaux</string>
+    <string name="action_settings">Paramètres</string>
     <string name="action_about">À propos</string>
     <string name="action_help">Aide</string>
     <!-- Navigation Drawer-->
-    <string name="navigation_drawer_open">Afficher le menu de navigation</string>
+    <string name="navigation_drawer_open">Ouvrir le menu de navigation</string>
     <string name="navigation_drawer_close">Fermer le menu de navigation</string>
     <!-- MainActivity-->
     <string name="roll_button">Jeter le dé</string>
@@ -18,23 +18,47 @@
     <!--About-->
     <string name="about">À propos</string>
     <string name="version_number">Version v%s</string>
-    <string name="about_affiliation">En partenariat avec</string>
-    <string name="privacy_friendly">Cette application appartient au groupe d\'applications respectant votre vie privée (Privacy Friendly Apps) développées par le Karlsruhe Institute of Technology (KIT). Le code source est sous licence GPLv3. Copyright des images : KIT et Google Inc.</string>
-    <string name="more_info">Des informations complémentaires sont disponibles sur :</string>
+    <string name="about_affiliation">En coopération avec</string>
+    <string name="privacy_friendly">Cette application fait partie du groupe Privacy Friendly Apps développé par l’Institut de technologie de Karlsruhe (KIT). Code source sous la licence GPLv3. Droit d’auteur pour les images : KIT et Google Inc.</string>
+    <string name="more_info">Pour plus d\'informations :</string>
     <!-- Help-->
     <string name="help_general">Général</string>
     <string name="help_general_description">Dicer peut être utilisé pour jeter entre un et dix dés à six faces. Choisissez le nombre de dés avec le curseur.</string>
     <string name="help_general_dicing">Appuyez sur le bouton pour jeter le dé. Le dé peut aussi être jeté en secouant le téléphone si l\'option est activée dans les paramètres.</string>
-    <string name="help_privacy_heading">Confidentialité</string>
+    <string name="help_privacy_heading">Vie privée</string>
     <string name="help_permissions_heading">Permissions</string>
     <string name="help_permissions_description">Dicer utilise la permission de vibration pour vibrer après l\'affichage d\'un nouveau résultat. Si la permission n\'est pas accordée, l\'appareil ne vibrera pas.</string>
     <!-- WelcomeDialog-->
     <string name="help_button">Voir l\'aide</string>
     <string name="slide1_heading">Bienvenue !</string>
-    <string name="okay">D\'accord</string>
+    <string name="okay">Ok</string>
     <string name="app_name">Lanceur de dés</string>
     <string name="app_name_long">Lanceur de dés et respectueux de la vie privée</string>
     <string name="action_tutorial">Tutoriel</string>
     <string name="next">Suivant</string>
     <string name="skip">Ignorer</string>
+    <string name="new_dice_mode_create_label">Créer</string>
+    <string name="restart_button">Redémarrer</string>
+    <string name="dice_mode_rounds_label">Tours :</string>
+    <string name="manage_dice_mode_delete_dialog_delete_label">Supprimer</string>
+    <string name="help_permissions_usage">En quoi l\'application est-elle respectueuse de la vie privée ? Quelles sont les autorisations nécessaires ?</string>
+    <string name="help_usage_roll">Comment lancer le dé ?</string>
+    <string name="activity_main_title">Dé</string>
+    <string name="enable_shaking_desc">Si activé, les dés peuvent être lancés en secouant le téléphone</string>
+    <string name="vibration_desc">Si activé, l’appareil vibrera brièvement à chaque lancer.</string>
+    <string name="shake_threshold_title">Sensibilité aux secouses</string>
+    <string name="new_dice_mode_title">Créer un nouveau mode de dé</string>
+    <string name="help_usage">Qu\'est-ce que Privacy Friendly Dicer ?</string>
+    <string name="dialog_select_game_mode_first_title">Sélectionnez le mode dé en premier</string>
+    <string name="activity_dice_mode_title">Mode dé</string>
+    <string name="activity_manage_dice_modes_title">Modes dé</string>
+    <string name="manage_dice_mode_fab_desc">Créer un nouveau mode de dé</string>
+    <string name="dialog_new_dice_mode_dice_mode_label">Mode de dé</string>
+    <string name="dialog_new_dice_mode_rounds">Nombre de tours</string>
+    <string name="dialog_new_dice_mode_face">Nombre de faces</string>
+    <string name="dialog_new_dice_mode_add">Ajouter un dé</string>
+    <string name="dice_mode_dice_mode_label">Mode de dé :</string>
+    <string name="dice_mode_dice_label">Dé :</string>
+    <string name="manage_dice_mode_delete_dialog_title">Supprimer le mode de dé %s</string>
+    <string name="preference_deleteDiceModeDialog_title">Confirmer la suppression du mode de dé</string>
 </resources>
